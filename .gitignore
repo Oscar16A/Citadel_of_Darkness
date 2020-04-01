@@ -59,3 +59,11 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+# Wwise Files and Directories
+/Citadel_of_Darkness_WwiseProject/*.validationcache
+/Citadel_of_Darkness_WwiseProject/*.wsettings
+/Citadel_of_Darkness_WwiseProject/IncrementalSoundBankData.xml
+/Citadel_of_Darkness_WwiseProject/Originals/SFX/*.akd
+/Citadel_of_Darkness_WwiseProject/.cache/
+/Citadel_of_Darkness_WwiseProject/.backup/
+
