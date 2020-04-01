@@ -1,8 +1,0 @@
-sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Scenes/Test Character.unity
-=======
-- path: Assets/Scenes/Cole's Exp/exp1.unity
->>>>>>> cd4d861204998660288c89c3cb8a10fac698da3f
-  isLoaded: 1
-  isActive: 1
