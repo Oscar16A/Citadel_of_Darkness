@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	4213462902	Play_Turtle_Squeal			\Default Work Unit\Play_Turtle_Squeal	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	318515670	Turtle Squeal	D:\GitHub\Citadel_of_Darkness\Citadel_of_Darkness_WwiseProject\.cache\Linux\SFX\Turtle Squeal_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Turtle Squeal		1057712
+

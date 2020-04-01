@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{BD820E0E-D222-4BF4-BB9E-0CBC5AAA7070}" SchemaVersion="97">
+	<SoundBanks>
+		<WorkUnit Name="Default Work Unit" ID="{BD820E0E-D222-4BF4-BB9E-0CBC5AAA7070}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="Main" ID="{A85F2FDE-1A4F-4F1B-9C72-0A7ECEB62031}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Play_Turtle_Squeal" ID="{2B343A60-1792-422E-9381-0A6E910E1AD8}" WorkUnitID="{BF7B8F25-273C-4FB6-8832-182924E218F1}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>

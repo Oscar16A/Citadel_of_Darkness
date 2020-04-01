@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{BF7B8F25-273C-4FB6-8832-182924E218F1}" SchemaVersion="97">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{BF7B8F25-273C-4FB6-8832-182924E218F1}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_Turtle_Squeal" ID="{2B343A60-1792-422E-9381-0A6E910E1AD8}">
+					<ChildrenList>
+						<Action Name="" ID="{7EA75F61-1835-4655-9FDC-636EEB67571F}" ShortID="482648143">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Turtle Squeal" ID="{2FB8ADA0-043A-45EF-8C15-F65774E81633}" WorkUnitID="{471DBAFB-3C9D-4167-8D59-F2033C0E6C08}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

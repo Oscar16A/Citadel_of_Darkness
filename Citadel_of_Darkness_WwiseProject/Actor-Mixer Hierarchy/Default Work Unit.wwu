@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{471DBAFB-3C9D-4167-8D59-F2033C0E6C08}" SchemaVersion="97">
+	<AudioObjects>
+		<WorkUnit Name="Default Work Unit" ID="{471DBAFB-3C9D-4167-8D59-F2033C0E6C08}" PersistMode="Standalone">
+			<ChildrenList>
+				<Sound Name="Turtle Squeal" ID="{2FB8ADA0-043A-45EF-8C15-F65774E81633}" ShortID="135974244">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0BDF628E-F7F9-4C26-9D7E-5104A7D60CA1}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{429ACA35-D079-4DCC-B9A5-258EB3500152}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Turtle Squeal" ID="{D0116F14-2738-4239-9BA6-D343BF6D9186}">
+							<Language>SFX</Language>
+							<AudioFile>Turtle Squeal.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="318515670"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Turtle Squeal" ID="{D0116F14-2738-4239-9BA6-D343BF6D9186}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

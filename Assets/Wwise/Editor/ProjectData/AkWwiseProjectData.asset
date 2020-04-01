@@ -1,0 +1,106 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 768f4be4f52d9bc41895f7a8924c4c9a, type: 3}
+  m_Name: AkWwiseProjectData
+  m_EditorClassIdentifier: 
+  AcousticTextureWwu:
+  - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: 045471a3712d79439cd5697103becec4
+    GuidInternal: 
+    m_lastTime: -8586158679604113505
+    List: []
+  AuxBusWwu:
+  - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: 35ca9a4279d0cc4db9a5258eb3500152
+    GuidInternal: 
+    m_lastTime: -8586158679602745209
+    List:
+    - name: Master Audio Bus
+      guid: d8a41415a61d2a41a17e75ca0c2149f3
+      id: 3803692087
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+      Path: Default Work Unit\Master Audio Bus
+  BankWwu:
+  - PhysicalPath: SoundBanks\Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: 0e0e82bd22d2f44bbb9e0cbc5aaa7070
+    GuidInternal: 
+    m_lastTime: -8586158629188864362
+    List:
+    - name: Main
+      guid: de2f5fa84f1a1b4f9c720a7eceb62031
+      id: 3161908922
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Main
+        ObjectType: 7
+      Path: Default Work Unit\Main
+  EventWwu:
+  - PhysicalPath: Events\Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: 258f7bbf3c27b64f8832182924e218f1
+    GuidInternal: 
+    m_lastTime: -8586158629456007726
+    List:
+    - name: Play_Turtle_Squeal
+      guid: 603a342b92172e4293810a6e910e1ad8
+      id: 4213462902
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Turtle_Squeal
+        ObjectType: 3
+      Path: Default Work Unit\Play_Turtle_Squeal
+      maxAttenuation: 0
+      maxDuration: 5.995374
+      minDuration: 5.995374
+  RtpcWwu:
+  - PhysicalPath: Game Parameters\Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: c86b5212828b9441aaa7e297c6953505
+    GuidInternal: 
+    m_lastTime: -8586158679603104347
+    List: []
+  StateWwu:
+  - PhysicalPath: States\Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: 056f537d9f13ae48b629a2ac5fe0652a
+    GuidInternal: 
+    m_lastTime: -8586158679603403533
+    List: []
+  SwitchWwu:
+  - PhysicalPath: Switches\Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: 64689a806b3ecf45a70c7b87fb7b54ab
+    GuidInternal: 
+    m_lastTime: -8586158679603024480
+    List: []
+  TriggerWwu:
+  - PhysicalPath: Triggers\Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: 338c5bd85ee10448881d0d6032a96345
+    GuidInternal: 
+    m_lastTime: -8586158679602825098
+    List: []
+  ExpandedItems:
+  - /Citadel_of_Darkness_WwiseProject
+  - /Citadel_of_Darkness_WwiseProject/SoundBanks
+  - /Citadel_of_Darkness_WwiseProject/SoundBanks/Default Work Unit
+  autoPopulateEnabled: 1
+  CurrentPluginConfig: 
