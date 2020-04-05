@@ -4,5 +4,7 @@ using System.Collections.Generic;
 
 public static class StatsData
 {
-	public static int collectables;
+	public static int collectables = 0;
+
+	
 }
