@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Collectable : MonoBehaviour
 {
-	
+	public GameObject effect;
 
     public void OnTriggerEnter(Collider other)
 	{
@@ -16,8 +16,10 @@ public class Collectable : MonoBehaviour
 	
 	void Pickup()
 	{
-		print("in pickup");
-		
+		Instantiate(effect, transform.position, transform.rotation);
+
+		StatsData.collectables++;
+
 		Destroy(gameObject);
 	}
 }
