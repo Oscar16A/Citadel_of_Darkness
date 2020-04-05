@@ -5,12 +5,11 @@ using UnityEngine;
 public class MouseMovement: MonoBehaviour
 {
     public float mouseSensitivity = 100f;
-    private Transform playerBody;
+    public Transform playerBody;
     private Transform playerCamera;
     private float xRotation = 0f;
     void Start()
     {
-        playerBody = transform.parent;
         playerCamera = transform.Find("Camera");
         Cursor.lockState = CursorLockMode.Locked;
     }

@@ -13,13 +13,19 @@ public class InteractControl : MonoBehaviour
         RaycastHit hit;
         Physics.Raycast(myCamera.position, myCamera.forward, out hit, interactDistance, myMask);
         Transform hitTransform = hit.transform;
-        interactText.SetActive(false);
+        if(interactText != null)
+        {
+            interactText.SetActive(false);
+        }
         if(hitTransform != null)
         {
             Interactable hitInteract = hitTransform.GetComponent<Interactable>();
             if(hitInteract != null)
             {
-                interactText.SetActive(true);
+                if(interactText != null)
+                {
+                    interactText.SetActive(true);
+                }
                 if(Input.GetKeyDown("e"))
                 {
                     hitInteract.HitTrigger();

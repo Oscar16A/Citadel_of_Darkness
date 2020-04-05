@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5124448551768421668}
   - component: {fileID: 5124448551768421666}
-  - component: {fileID: 5124448551768421669}
+  - component: {fileID: 725997188629204074}
+  - component: {fileID: 5922501310374134655}
   m_Layer: 0
   m_Name: Camera
   m_TagString: MainCamera
@@ -74,14 +75,42 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &5124448551768421669
-AudioListener:
+--- !u!114 &725997188629204074
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5124448551768421671}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c9e1b17259d4de4a8845f89dd9dc41b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 0
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
+--- !u!114 &5922501310374134655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5124448551768421671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c1eb38c3a6b8904a9ae33a231c95b07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDefaultListener: 1
+  listenerId: 0
 --- !u!1 &5124448552408530025
 GameObject:
   m_ObjectHideFlags: 0
@@ -157,6 +186,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mouseSensitivity: 100
+  playerBody: {fileID: 5124448553137457709}
 --- !u!1 &5124448553137457697
 GameObject:
   m_ObjectHideFlags: 0
@@ -177,7 +207,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5124448553137457709
 Transform:
   m_ObjectHideFlags: 0
@@ -283,10 +313,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43878f343484a26459c5023e89790ec1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 12
+  speed: 6
+  sprintSpeed: 9
+  crouchSpeed: 3
   jumpHeight: 3
   gravity: -19.62
-  groundDistance: 0.4
+  fallingGravityMultiplier: 2.5
+  airControl: 1
+  groundDistance: 0.5
   groundMask:
     serializedVersion: 2
     m_Bits: 512
+  isGrounded: 0
+  walking: 0
+  freeze: 0
