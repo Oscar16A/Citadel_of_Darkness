@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:Assets/Art/Test Player.meta
-guid: 11615e7b3ce6c524e9ad8a446883b704
-=======
-guid: 865a9979c64e5da448aeed5e6d8b3de6
->>>>>>> 6d5da7c19787a3f00d81f7cfb12a734e4795eb57:Assets/EffectExamples/Editor.meta
+guid: a5a58ccfb8aa253409655ef21c12cedf
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
