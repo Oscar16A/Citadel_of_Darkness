@@ -287,7 +287,7 @@ MonoBehaviour:
   myMask:
     serializedVersion: 2
     m_Bits: 512
-  anim: {fileID: 0}
+  anim: {fileID: 4142548425701171594}
 --- !u!1 &5662845070209319018
 GameObject:
   m_ObjectHideFlags: 0
