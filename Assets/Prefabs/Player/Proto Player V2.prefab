@@ -233,7 +233,7 @@ MonoBehaviour:
   jumpHeight: 2
   gravity: -19.62
   fallingGravityMultiplier: 2.5
-  airControl: 1
+  airControl: 0
   groundDistance: 0.5
   groundMask:
     serializedVersion: 2
@@ -287,7 +287,7 @@ MonoBehaviour:
   myMask:
     serializedVersion: 2
     m_Bits: 512
-  anim: {fileID: 0}
+  anim: {fileID: 4142548425701171594}
 --- !u!1 &5662845070209319018
 GameObject:
   m_ObjectHideFlags: 0
