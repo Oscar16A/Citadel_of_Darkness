@@ -16,10 +16,11 @@ public class StopWatch : MonoBehaviour
 	{
 		float t = Time.time - startTime;
 
-		string minutes = ((int)t / 60).ToString();
-		string seconds = (t % 60).ToString("f0");
+		string minutes = ((int)t / 60).ToString("00");
+		string seconds = (t % 60).ToString("00");
 
-		timer.text = minutes + ":" + seconds;
+		timer.text = string.Format("{0}:{1}",minutes,seconds);
+	
 	}
 
 }
