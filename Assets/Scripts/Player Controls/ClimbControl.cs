@@ -10,6 +10,7 @@ public class ClimbControl : MonoBehaviour
     private bool oneClimb;
     public LayerMask myMask;
     public Animator anim;
+    public float angleTolerance = 0f; // how far the ledge can be tillted and still be climbed
     void Start()
     {
         movement = GetComponent<PlayerMovement>();
@@ -37,7 +38,7 @@ public class ClimbControl : MonoBehaviour
     {
         if(Physics.Raycast(transform.position + transform.forward + new Vector3(0f,2f,0f), -transform.up, out hit, 2.5f, myMask))
         {
-            if(hit.normal == Vector3.up)
+            if(Vector3.Angle(hit.normal, Vector3.up) <= angleTolerance)
             {
                 return true;
             }
