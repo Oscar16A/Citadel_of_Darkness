@@ -67,3 +67,5 @@ crashlytics-build.properties
 /Citadel_of_Darkness_WwiseProject/.cache/
 /Citadel_of_Darkness_WwiseProject/.backup/
 
+Assets/Wwise/ScriptableObjects/AkWwiseInitializationSettings.asset
+ProjectSettings/Packages/com.unity.probuilder/Settings.json

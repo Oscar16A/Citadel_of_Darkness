@@ -35,7 +35,7 @@ public class ClimbControl : MonoBehaviour
 
     private bool CheckClimb(ref RaycastHit hit)
     {
-        if(Physics.Raycast(transform.position + transform.forward + new Vector3(0f,2f,0f), -transform.up, out hit, 2f, myMask))
+        if(Physics.Raycast(transform.position + transform.forward + new Vector3(0f,2f,0f), -transform.up, out hit, 2.5f, myMask))
         {
             if(hit.normal == Vector3.up)
             {
@@ -57,7 +57,7 @@ public class ClimbControl : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.green;
-        Gizmos.DrawRay(transform.position + transform.forward + new Vector3(0f,2f,0f), -transform.up*2f);
+        Gizmos.DrawRay(transform.position + transform.forward + new Vector3(0f,2f,0f), -transform.up*2.5f);
     }
 
     private void UnfreezeDelay(float time)
