@@ -10,9 +10,14 @@ public class MenuUI : MonoBehaviour
 	public TMP_Text mouseInput;
 	public TMP_Text volumeInput;
 
-	public void Awake()
+	public Slider mouseSlider;
+	public Slider volumeSlider;
+
+	private float default_mouse = 100f;
+
+	public void Start()
 	{
-		//mMove = GetComponent<MouseMovement>();
+		
 	}
     public void Play()
 	{
@@ -40,5 +45,17 @@ public class MenuUI : MonoBehaviour
 		volumeInput.text = input.ToString();
 		StatsData.volumeLevel = input;
 		print("statsData.volume=" + StatsData.volumeLevel);
+	}
+	public void Restore()
+	{
+		mouseInput.text = "3.2";
+		volumeInput.text = "70";
+
+		StatsData.mouseSensitivity = 3.2f * 10 + 70;
+		StatsData.volumeLevel = 100;
+
+		mouseSlider.value = 3.2f;
+		volumeSlider.value = 70;
+
 	}
 }

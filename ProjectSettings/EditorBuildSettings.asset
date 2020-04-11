@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Santi/MainMenu.unity
     guid: 6f267b28d3c4c21499795f1772c2c3fa
   - enabled: 1
+    path: Assets/Scenes/Santi/testMouseSens.unity
+    guid: 4e8f4794c5748594ebfb1361539e1f06
+  - enabled: 0
     path: Assets/Scenes/Cole's Exp/exp1.unity
     guid: 30f9d830bd961c94282eac0705f0dcc5
   m_configObjects: {}
