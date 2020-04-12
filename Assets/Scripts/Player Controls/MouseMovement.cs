@@ -12,6 +12,8 @@ public class MouseMovement: MonoBehaviour
     {
         playerCamera = transform.Find("Camera");
         Cursor.lockState = CursorLockMode.Locked;
+		mouseSensitivity = StatsData.mouseSensitivity;
+		//print(StatsData.mouseSensitivity);
     }
     void Update()
     {
