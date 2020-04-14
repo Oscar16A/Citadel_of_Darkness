@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     public float fallingGravityMultiplier = 2f;
     private float startGravity;
     Vector3 velocity;
+    RaycastHit hit;
     public bool airControl;
     Transform groundCheck;
     public float groundDistance = 0.4f;
@@ -32,6 +33,9 @@ public class PlayerMovement : MonoBehaviour
         if(!freeze)
         {
             isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+            Physics.SphereCast(transform.position, groundDistance, -Vector3.up, out hit, groundMask);
+            bool canWalk = Vector3.Angle(hit.normal,Vector3.up) <= controller.slopeLimit;
+
             walking = false;
             //Debug.Log(controller.velocity);
             if(Vector3.Magnitude(controller.velocity) > 0 && isGrounded)
@@ -68,7 +72,7 @@ public class PlayerMovement : MonoBehaviour
             }
 
             //jump
-            if(Input.GetButtonDown("Jump") && isGrounded)
+            if(Input.GetButtonDown("Jump") && isGrounded && canWalk)
             {
                 velocity.y = Mathf.Sqrt(jumpHeight * -2 * startGravity);
             }
