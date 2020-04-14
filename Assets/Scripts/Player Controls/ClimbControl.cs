@@ -52,7 +52,7 @@ public class ClimbControl : MonoBehaviour
         movement.freeze = true;
         controller.Move(transform.forward + new Vector3(0f,hit.point.y-transform.position.y + 1f,0f));
         anim.SetTrigger("Climb");
-        UnfreezeDelay(0.2f);
+        UnfreezeDelay(0.34f);
     }
 
     private void OnDrawGizmos()
