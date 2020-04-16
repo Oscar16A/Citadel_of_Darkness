@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 8001311927785392301}
   - component: {fileID: 8001311927782000781}
   - component: {fileID: 8001311927783098957}
-  m_Layer: 0
+  - component: {fileID: 5078972417824941524}
+  m_Layer: 9
   m_Name: g_Group53650_Group53650
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -77,6 +78,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &5078972417824941524
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8001311927785034893}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: 76c678fbfbc79a54ab7a9aa0bfc33cc7, type: 3}
 --- !u!1 &8001311927785034895
 GameObject:
   m_ObjectHideFlags: 0
@@ -86,7 +101,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8001311927785392303}
-  m_Layer: 0
+  - component: {fileID: 4385319373081213652}
+  m_Layer: 9
   m_Name: RockColumn00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,10 +117,24 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8001311927785034895}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.6179862, y: 3.4002001, z: -5.024295}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8001311927785392301}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &4385319373081213652
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8001311927785034895}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 0}

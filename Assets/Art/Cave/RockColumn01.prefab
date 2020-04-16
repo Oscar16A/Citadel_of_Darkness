@@ -9,7 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7931521680686322141}
-  m_Layer: 0
+  - component: {fileID: 411765591587798553}
+  m_Layer: 9
   m_Name: RockColumn01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24,13 +25,27 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7931521680686026237}
   m_LocalRotation: {x: -0, y: -0.7728711, z: -0, w: -0.6345631}
-  m_LocalPosition: {x: 5.982002, y: 3.3815, z: 7.0406466}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7931521680686322143}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -258.775, z: 0}
+--- !u!64 &411765591587798553
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7931521680686026237}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 0}
 --- !u!1 &7931521680686026239
 GameObject:
   m_ObjectHideFlags: 0
@@ -42,7 +57,7 @@ GameObject:
   - component: {fileID: 7931521680686322143}
   - component: {fileID: 7931521680687124991}
   - component: {fileID: 7931521680688223039}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: g_Group61082_Group61082
   m_TagString: Untagged
   m_Icon: {fileID: 0}
