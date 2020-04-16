@@ -2,19 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ClimbControl : MonoBehaviour
+public class ClimbControl2 : MonoBehaviour
 {
-    private PlayerMovement movement;
+    private PlayerMovement2 movement;
     private CharacterController controller;
     private bool validClimb;
-    private bool oneClimb;
-    public LayerMask myMask;
+    private LayerMask myMask;
     public Animator anim;
     public float angleTolerance = 0f; // how far the ledge can be tillted and still be climbed
-    void Start()
+    private void Start()
     {
-        movement = GetComponent<PlayerMovement>();
+        movement = GetComponent<PlayerMovement2>();
         controller = GetComponent<CharacterController>();
+        myMask = movement.groundMask;
     }
     private void Update()
     {
@@ -22,15 +22,10 @@ public class ClimbControl : MonoBehaviour
         {
             RaycastHit hit = new RaycastHit();
             validClimb = CheckClimb(ref hit);
-            if(Input.GetKeyDown("space") && validClimb && oneClimb)
+            if(Input.GetKey("w") && validClimb)
             {
-                oneClimb = false;
                 ClimbLedge(ref hit);
             }
-        }
-        else
-        {
-            oneClimb = true;
         }
     }
 

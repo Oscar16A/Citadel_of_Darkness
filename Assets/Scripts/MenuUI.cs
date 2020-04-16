@@ -6,24 +6,49 @@ using TMPro;
 using UnityEngine.SceneManagement;
 public class MenuUI : MonoBehaviour
 {
-	//MouseMovement mMove;
+	
 	public TMP_Text mouseInput;
 	public TMP_Text volumeInput;
 
 	public Slider mouseSlider;
 	public Slider volumeSlider;
 
-	private float default_mouse = 100f;
+	public Animator transition_anim;
+	public float transitionTime = 1f;
 
-	public void Start()
+	public GameObject Title_panel;
+	public GameObject Menu_panel;
+	private bool title = true;
+	
+
+	public void Update()
 	{
-		
+		//print("update");
+		if(Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter) && title)
+		{
+			StartCoroutine((Transition()));
+		}
 	}
     public void Play()
 	{
 		print("Playing next level...");
-	
-		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+		StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
+	}
+	IEnumerator Transition()
+	{
+		title = false;
+		transition_anim.SetTrigger("TransitionLevel");
+		Title_panel.SetActive(false);
+		yield return new WaitForSeconds(transitionTime/2);
+		transition_anim.SetTrigger("Start");
+		Menu_panel.SetActive(true);
+	}
+		
+	IEnumerator LoadLevel(int index)
+	{
+		transition_anim.SetTrigger("TransitionLevel");
+		yield return new WaitForSeconds(transitionTime);
+		SceneManager.LoadScene(index);
 	}
 	public void Quit()
 	{
@@ -35,16 +60,14 @@ public class MenuUI : MonoBehaviour
 	{    
 		mouseInput.text = input.ToString("F1");
 		StatsData.mouseSensitivity = input * 10 + 70;
-		print("statsData.mouse=" + StatsData.mouseSensitivity);
 
-		//print(input);
 		// N*10 + 70
 	}
 	public void VolumeLevel(float input)
 	{
 		volumeInput.text = input.ToString();
 		StatsData.volumeLevel = input;
-		print("statsData.volume=" + StatsData.volumeLevel);
+
 	}
 	public void Restore()
 	{

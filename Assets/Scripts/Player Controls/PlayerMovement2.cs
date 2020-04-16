@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement2 : MonoBehaviour
 {
     CharacterController controller;
     public float speed = 6f;
@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
     public float gravity = -9.81f;
     public float fallingGravityMultiplier = 2f;
     private float startGravity;
-    Vector3 velocity;
+    public Vector3 velocity;
     RaycastHit hit;
     public bool airControl;
     Transform groundCheck;
@@ -22,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
     public bool isGrounded;
     public bool walking;
     public bool freeze = false;
+    public bool freezeY = false;
     void Start()
     {
         controller = GetComponent<CharacterController>();
@@ -89,6 +90,11 @@ public class PlayerMovement : MonoBehaviour
             
             //apply gravity
             velocity.y += gravity * Time.deltaTime;
+            //don't apply gravity if freezeY true
+            if(freezeY)
+            {
+                velocity.y = 0f;
+            }
             // perform movement
             controller.Move(velocity * Time.deltaTime); //only one .Move()
         }
