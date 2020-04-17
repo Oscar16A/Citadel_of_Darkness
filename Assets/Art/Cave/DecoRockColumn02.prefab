@@ -101,10 +101,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8001311927785392303}
-  - component: {fileID: 7105904179905194014}
-  - component: {fileID: 4965111873008113414}
   m_Layer: 9
-  m_Name: RockColumn00
+  m_Name: DecoRockColumn02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -125,29 +123,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &7105904179905194014
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8001311927785034895}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 5.39, y: 1.31, z: 3.9}
-  m_Center: {x: -1.6384512, y: 3.74, z: 0.06}
---- !u!65 &4965111873008113414
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8001311927785034895}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 5.71, y: 1.07, z: 5}
-  m_Center: {x: -2.52, y: -3.2, z: -0.17}
