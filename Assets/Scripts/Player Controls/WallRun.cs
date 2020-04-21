@@ -29,7 +29,7 @@ public class WallRun : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(stance);
+        //Debug.Log(stance);
         //check if still on wall
         OffWallCheck();
 
