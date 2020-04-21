@@ -10,6 +10,7 @@ public class ClimbControl2 : MonoBehaviour
     private LayerMask myMask;
     public Animator anim;
     public float angleTolerance = 0f; // how far the ledge can be tillted and still be climbed
+    private bool freeze;
     private void Start()
     {
         movement = GetComponent<PlayerMovement2>();
@@ -22,9 +23,13 @@ public class ClimbControl2 : MonoBehaviour
         {
             RaycastHit hit = new RaycastHit();
             validClimb = CheckClimb(ref hit);
+            // Debug.Log(hit.normal);
             if(Input.GetKey("w") && validClimb)
             {
-                ClimbLedge(ref hit);
+                if(!freeze)
+                {
+                    ClimbLedge(ref hit);
+                }
             }
         }
     }
@@ -35,7 +40,10 @@ public class ClimbControl2 : MonoBehaviour
         {
             if(Vector3.Angle(hit.normal, Vector3.up) <= angleTolerance)
             {
-                return true;
+                if(!Physics.Raycast(transform.position + transform.forward + new Vector3(0f,2f,0f), transform.up, 1.5f, myMask))
+                {
+                    return true;
+                }
             }
         }
 
@@ -45,6 +53,7 @@ public class ClimbControl2 : MonoBehaviour
     private void ClimbLedge(ref RaycastHit hit)
     {
         movement.freeze = true;
+        freeze = true;
         controller.Move(transform.forward + new Vector3(0f,hit.point.y-transform.position.y + 1f,0f));
         anim.SetTrigger("Climb");
         UnfreezeDelay(0.34f);
@@ -54,6 +63,8 @@ public class ClimbControl2 : MonoBehaviour
     {
         Gizmos.color = Color.green;
         Gizmos.DrawRay(transform.position + transform.forward + new Vector3(0f,2f,0f), -transform.up*2.5f);
+        Gizmos.color = Color.red;
+        Gizmos.DrawRay(transform.position + transform.forward + new Vector3(0f,2f,0f), transform.up*1.5f);
     }
 
     private void UnfreezeDelay(float time)
@@ -66,5 +77,6 @@ public class ClimbControl2 : MonoBehaviour
     {
         yield return new WaitForSeconds(time);
         movement.freeze = false;
+        freeze = false;
     }
 }

@@ -18,6 +18,7 @@ public class MenuUI : MonoBehaviour
 
 	public GameObject Title_panel;
 	public GameObject Menu_panel;
+	public GameObject Popup_panel;
 	private bool title = true;
 	
 
@@ -50,11 +51,17 @@ public class MenuUI : MonoBehaviour
 		yield return new WaitForSeconds(transitionTime);
 		SceneManager.LoadScene(index);
 	}
+	IEnumerator QuitGame()
+	{
+		transition_anim.SetTrigger("TransitionLevel");
+		Popup_panel.SetActive(false);
+		yield return new WaitForSeconds(transitionTime);
+		Application.Quit();
+	}
 	public void Quit()
 	{
 		print("Quitting...");
-
-		Application.Quit();
+		StartCoroutine(QuitGame());
 	}
 	public void MouseSensitivity(float input)
 	{    

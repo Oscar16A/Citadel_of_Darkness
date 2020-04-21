@@ -2,92 +2,108 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class WallRun : MonoBehaviour
 {
+    private enum Lean {
+        None,
+        Right,
+        Left
+    }
+    private Lean stance;
     private PlayerMovement2 movement;
     private CharacterController controller;
     private LayerMask myMask;
     private bool validWall;
     private float startGravity;
-
+    private float timeLeft;
+    private ControllerColliderHit myHit;
     private void Start()
     {
         movement = GetComponent<PlayerMovement2>();
         controller = GetComponent<CharacterController>();
         myMask = movement.groundMask;
         startGravity = movement.gravity;
+        stance = Lean.None;
     }
 
     private void Update()
     {
-        RaycastHit hit = new RaycastHit();
-        if(!movement.isGrounded)
+        //Debug.Log(stance);
+        //check if still on wall
+        OffWallCheck();
+
+        if(Input.GetKey("w") && validWall)
         {
-            if(CheckWall(ref hit) && Input.GetKey("w"))
-            {
-                //Debug.Log(hit.normal + " hit normal");
-                //Debug.Log(Vector3.SignedAngle(hit.normal, transform.forward, Vector3.up) + " compare angle forward");//negative left, positive right
-                Run(ref hit);
-            }
-            else
-            {
-                movement.freezeY = false;
-            }
+            Run();
         }
         else
         {
             movement.freezeY = false;
         }
     }
-
-    private bool CheckWall(ref RaycastHit hit)
+    private void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        if(Physics.Raycast(transform.position, transform.forward, out hit, 2f, myMask)) //facing a wall
-        {
-            if(Falling())
-            {
-                //Debug.Log("valid wall");
-                return true;
-            }
-        }
-        //Debug.Log("not valid wall");
-        return false;
+        myHit = hit;
+        OnWallCheck();
     }
-    private void Run(ref RaycastHit hit)
+    private void OffWallCheck()
     {
-        movement.freezeY = true;
-        if(Input.GetKeyDown("space"))
+        timeLeft -= Time.deltaTime;
+        if(timeLeft <= 0f)
         {
-            HopOff(ref hit);
+            validWall = false;
+            stance = Lean.None;
         }
     }
-
-    private void OnDrawGizmos()
+    private void OnWallCheck()
     {
-        Gizmos.color = Color.green;
-        Gizmos.DrawRay(transform.position, transform.forward * 2f);
+        if(!movement.isGrounded && myHit.normal.y < 0.1f && Falling())
+        {
+            Debug.DrawRay(myHit.point, myHit.normal, Color.red, 1.25f);
+            timeLeft = 0.1f;
+            validWall = true;
+        }
     }
-
     private bool Falling()
     {
         return controller.velocity.y <= 0f;
     }
-    private void HopOff(ref RaycastHit hit)
+    private void Run()
     {
-        movement.velocity = Vector3.zero;
-        
+        movement.freezeY = true;
 
-        if(Vector3.SignedAngle(hit.normal, transform.forward, Vector3.up) > 0f)//wall right, move left
+        if(Vector3.SignedAngle(myHit.normal, transform.forward, Vector3.up) > 0f)//wall right
         {
-            movement.velocity += -transform.right * movement.sprintSpeed;
-
+            Vector3 direction = Vector3.Normalize(new Vector3(myHit.normal.x, 0f, myHit.normal.z));
+            direction = Quaternion.Euler(0f,100f,0f) * direction;
+            movement.velocity = direction * movement.speed;
+            stance = Lean.Left;
         }
-        else//wall left, move rigt
+        else//wall left
         {
-            movement.velocity += transform.right * movement.sprintSpeed;
+            Vector3 direction = Vector3.Normalize(new Vector3(myHit.normal.x, 0f, myHit.normal.z));
+            direction = Quaternion.Euler(0f,-100f,0f) * direction;
+            movement.velocity = direction * movement.speed;
+            stance = Lean.Right;
         }
 
-        movement.velocity.y = Mathf.Sqrt(movement.jumpHeight * -2 * startGravity);//add vertical movement
+        if(Input.GetKeyDown("space"))
+        {
+            HopOff();
+            stance = Lean.None;
+        }
+    }    
+    private void HopOff()
+    {
+        //horizontal movemvent
+        Vector3 direction = Vector3.Normalize(new Vector3(myHit.normal.x, 0f, myHit.normal.z));
+        movement.velocity += direction * movement.sprintSpeed;
+        //vertical movement
+        movement.velocity.y = Mathf.Sqrt(movement.jumpHeight * -2 * startGravity);
+
+        //clean up
         movement.freezeY = false;
+        validWall = false;
     }
 }
