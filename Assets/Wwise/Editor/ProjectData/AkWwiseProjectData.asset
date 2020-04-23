@@ -40,7 +40,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 0e0e82bd22d2f44bbb9e0cbc5aaa7070
     GuidInternal: 
-    m_lastTime: -8586158629188864362
+    m_lastTime: -8586140768221372240
     List:
     - name: Main
       guid: de2f5fa84f1a1b4f9c720a7eceb62031
@@ -56,8 +56,68 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 258f7bbf3c27b64f8832182924e218f1
     GuidInternal: 
-    m_lastTime: -8586158629456007726
+    m_lastTime: -8586151384239672279
     List:
+    - name: Play_Footsteps_Running
+      guid: 3a58120f317a0b42ab9d513dc4d16b07
+      id: 203814959
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Footsteps_Running
+        ObjectType: 3
+      Path: Default Work Unit\Play_Footsteps_Running
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Footsteps_Walking
+      guid: 62500344c3feac42996374ef8abea7a1
+      id: 1871925003
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Footsteps_Walking
+        ObjectType: 3
+      Path: Default Work Unit\Play_Footsteps_Walking
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Footsteps_Wall_Run
+      guid: 69df4e8f2a40174583c6644ce950d897
+      id: 3729537260
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Footsteps_Wall_Run
+        ObjectType: 3
+      Path: Default Work Unit\Play_Footsteps_Wall_Run
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Jump
+      guid: 6e149461ccda944e868c4416fcb78f4e
+      id: 3689126666
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Jump
+        ObjectType: 3
+      Path: Default Work Unit\Play_Jump
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Jump_Landing
+      guid: 39f3cb8957900846bced292e6472eed5
+      id: 3808321334
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Jump_Landing
+        ObjectType: 3
+      Path: Default Work Unit\Play_Jump_Landing
+      maxAttenuation: 0
+      maxDuration: 0.206735
+      minDuration: 0.19712
     - name: Play_Turtle_Squeal
       guid: 603a342b92172e4293810a6e910e1ad8
       id: 4213462902
@@ -70,6 +130,42 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 5.995374
       minDuration: 5.995374
+    - name: Stop_Footsteps_Running
+      guid: 8c345c1ad72d4f4db9865e46562a25d7
+      id: 3603051261
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Stop_Footsteps_Running
+        ObjectType: 3
+      Path: Default Work Unit\Stop_Footsteps_Running
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_Footsteps_Walking
+      guid: 782f8b2627b53b439afc0b3a1dbad3e5
+      id: 2120730845
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Stop_Footsteps_Walking
+        ObjectType: 3
+      Path: Default Work Unit\Stop_Footsteps_Walking
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_Footsteps_Wall_Run
+      guid: 262d8261e49a7048aff8d824537e084d
+      id: 1786762098
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Stop_Footsteps_Wall_Run
+        ObjectType: 3
+      Path: Default Work Unit\Stop_Footsteps_Wall_Run
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPath: Default Work Unit

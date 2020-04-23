@@ -21,6 +21,39 @@
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<IncludedEvents>
+				<Event Id="203814959" Name="Play_Footsteps_Running" ObjectPath="\Events\Default Work Unit\Play_Footsteps_Running" DurationType="Infinite"/>
+				<Event Id="1871925003" Name="Play_Footsteps_Walking" ObjectPath="\Events\Default Work Unit\Play_Footsteps_Walking" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="29352538" Language="SFX">
+							<ShortName>footstep_walking_1.wav</ShortName>
+							<Path>SFX\footstep_walking_1_10C4C929.wem</Path>
+						</File>
+						<File Id="182811041" Language="SFX">
+							<ShortName>footstep_walking_2.wav</ShortName>
+							<Path>SFX\footstep_walking_2_10C4C929.wem</Path>
+						</File>
+						<File Id="981710280" Language="SFX">
+							<ShortName>footstep_walking_3.wav</ShortName>
+							<Path>SFX\footstep_walking_3_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3808321334" Name="Play_Jump_Landing" ObjectPath="\Events\Default Work Unit\Play_Jump_Landing" DurationType="OneShot" DurationMin="0.197120" DurationMax="0.206735">
+					<IncludedMemoryFiles>
+						<File Id="284850333" Language="SFX">
+							<ShortName>jump_landing_3.wav</ShortName>
+							<Path>SFX\jump_landing_3_10C4C929.wem</Path>
+						</File>
+						<File Id="804107894" Language="SFX">
+							<ShortName>jump_landing_2.wav</ShortName>
+							<Path>SFX\jump_landing_2_10C4C929.wem</Path>
+						</File>
+						<File Id="944141105" Language="SFX">
+							<ShortName>jump_landing_1.wav</ShortName>
+							<Path>SFX\jump_landing_1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="4213462902" Name="Play_Turtle_Squeal" ObjectPath="\Events\Default Work Unit\Play_Turtle_Squeal" DurationType="OneShot" DurationMin="5.995374" DurationMax="5.995374">
 					<IncludedMemoryFiles>
 						<File Id="318515670" Language="SFX">
@@ -29,6 +62,8 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="3603051261" Name="Stop_Footsteps_Running" ObjectPath="\Events\Default Work Unit\Stop_Footsteps_Running" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2120730845" Name="Stop_Footsteps_Walking" ObjectPath="\Events\Default Work Unit\Stop_Footsteps_Walking" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 			</IncludedEvents>
 		</SoundBank>
 	</SoundBanks>
