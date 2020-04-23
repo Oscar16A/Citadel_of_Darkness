@@ -33,7 +33,7 @@ public class WallRun : MonoBehaviour
         //check if still on wall
         OffWallCheck();
 
-        if(Input.GetKey("w") && validWall)
+        if((Input.GetAxisRaw("Vertical") > 0) && validWall)
         {
             Run();
         }
@@ -88,7 +88,7 @@ public class WallRun : MonoBehaviour
             stance = Lean.Right;
         }
 
-        if(Input.GetKeyDown("space"))
+        if(Input.GetButtonDown("Jump"))
         {
             HopOff();
             stance = Lean.None;

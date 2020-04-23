@@ -8,6 +8,7 @@ public class ClimbControl2 : MonoBehaviour
     private CharacterController controller;
     private bool validClimb;
     private LayerMask myMask;
+    public float animLength = 0.34f; //in seconds
     public Animator anim;
     public float angleTolerance = 0f; // how far the ledge can be tillted and still be climbed
     private bool freeze;
@@ -24,7 +25,7 @@ public class ClimbControl2 : MonoBehaviour
             RaycastHit hit = new RaycastHit();
             validClimb = CheckClimb(ref hit);
             // Debug.Log(hit.normal);
-            if(Input.GetKey("w") && validClimb)
+            if((Input.GetAxisRaw("Vertical") > 0) && validClimb)
             {
                 if(!freeze)
                 {
@@ -56,7 +57,7 @@ public class ClimbControl2 : MonoBehaviour
         freeze = true;
         controller.Move(transform.forward + new Vector3(0f,hit.point.y-transform.position.y + 1f,0f));
         anim.SetTrigger("Climb");
-        UnfreezeDelay(0.34f);
+        UnfreezeDelay(animLength);
     }
 
     private void OnDrawGizmos()
