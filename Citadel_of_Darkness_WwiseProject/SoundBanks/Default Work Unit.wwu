@@ -5,7 +5,12 @@
 			<ChildrenList>
 				<SoundBank Name="Main" ID="{A85F2FDE-1A4F-4F1B-9C72-0A7ECEB62031}">
 					<ObjectInclusionList>
+						<ObjectRef Name="Play_Footsteps_Running" ID="{0F12583A-7A31-420B-AB9D-513DC4D16B07}" WorkUnitID="{BF7B8F25-273C-4FB6-8832-182924E218F1}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Turtle_Squeal" ID="{2B343A60-1792-422E-9381-0A6E910E1AD8}" WorkUnitID="{BF7B8F25-273C-4FB6-8832-182924E218F1}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Footsteps_Walking" ID="{44035062-FEC3-42AC-9963-74EF8ABEA7A1}" WorkUnitID="{BF7B8F25-273C-4FB6-8832-182924E218F1}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_Footsteps_Walking" ID="{268B2F78-B527-433B-9AFC-0B3A1DBAD3E5}" WorkUnitID="{BF7B8F25-273C-4FB6-8832-182924E218F1}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Jump_Landing" ID="{89CBF339-9057-4608-BCED-292E6472EED5}" WorkUnitID="{BF7B8F25-273C-4FB6-8832-182924E218F1}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_Footsteps_Running" ID="{1A5C348C-2DD7-4D4F-B986-5E46562A25D7}" WorkUnitID="{BF7B8F25-273C-4FB6-8832-182924E218F1}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

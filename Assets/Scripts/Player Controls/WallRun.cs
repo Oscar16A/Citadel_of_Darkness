@@ -33,7 +33,7 @@ public class WallRun : MonoBehaviour
         //check if still on wall
         OffWallCheck();
 
-        if(Input.GetKey("w") && validWall)
+        if((Input.GetAxisRaw("Vertical") > 0) && validWall)
         {
             Run();
         }
@@ -44,6 +44,7 @@ public class WallRun : MonoBehaviour
     }
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
+        Debug.Log(hit.normal);
         myHit = hit;
         OnWallCheck();
     }
@@ -58,7 +59,7 @@ public class WallRun : MonoBehaviour
     }
     private void OnWallCheck()
     {
-        if(!movement.isGrounded && myHit.normal.y < 0.1f && Falling())
+        if(!movement.isGrounded && (myHit.normal.y < 0.1f && myHit.normal.y > -0.1f) && Falling())
         {
             Debug.DrawRay(myHit.point, myHit.normal, Color.red, 1.25f);
             timeLeft = 0.1f;
@@ -88,7 +89,7 @@ public class WallRun : MonoBehaviour
             stance = Lean.Right;
         }
 
-        if(Input.GetKeyDown("space"))
+        if(Input.GetButtonDown("Jump"))
         {
             HopOff();
             stance = Lean.None;
