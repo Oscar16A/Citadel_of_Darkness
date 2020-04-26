@@ -54,11 +54,11 @@ public class PlayerMovement2 : MonoBehaviour
             Vector3 move = transform.right * x + transform.forward * z;
             move = Vector3.ClampMagnitude(move, 1f);
             //horizontal speed
-            if(Input.GetKey("left shift")) //sprint
+            if(Input.GetButton("Sprint")) //sprint
             {
                 move *= sprintSpeed;
             }
-            else if(Input.GetKey("left ctrl")) //crouch
+            else if(Input.GetButton("Crouch")) //crouch
             {
                 move *= crouchSpeed;
             }
