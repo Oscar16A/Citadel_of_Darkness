@@ -44,6 +44,7 @@ public class WallRun : MonoBehaviour
     }
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
+        Debug.Log(hit.normal);
         myHit = hit;
         OnWallCheck();
     }
@@ -58,7 +59,7 @@ public class WallRun : MonoBehaviour
     }
     private void OnWallCheck()
     {
-        if(!movement.isGrounded && myHit.normal.y < 0.1f && Falling())
+        if(!movement.isGrounded && (myHit.normal.y < 0.1f && myHit.normal.y > -0.1f) && Falling())
         {
             Debug.DrawRay(myHit.point, myHit.normal, Color.red, 1.25f);
             timeLeft = 0.1f;

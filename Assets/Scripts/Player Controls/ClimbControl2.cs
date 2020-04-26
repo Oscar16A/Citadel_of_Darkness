@@ -12,6 +12,8 @@ public class ClimbControl2 : MonoBehaviour
     public Animator anim;
     public float angleTolerance = 0f; // how far the ledge can be tillted and still be climbed
     private bool freeze;
+    Vector3 fS;
+    Vector3 uS;
     private void Start()
     {
         movement = GetComponent<PlayerMovement2>();
@@ -20,10 +22,31 @@ public class ClimbControl2 : MonoBehaviour
     }
     private void Update()
     {
+        // RaycastHit upSphere = new RaycastHit();
+        // if(Physics.SphereCast(transform.position, 0.5f, Vector3.up, out upSphere, 2.5f, myMask))
+        // {
+        //     uS = transform.position + Vector3.up * upSphere.distance;
+        // }
+        // else
+        // {
+        //     uS = transform.position + Vector3.up * 2.5f;
+        // }
+
+        // RaycastHit forwardSphere = new RaycastHit();
+        // if(Physics.SphereCast(transform.position + Vector3.up * 2.5f, 0.5f, transform.forward, out forwardSphere, 1f, myMask))
+        // {
+        //     fS = (transform.position + Vector3.up * 2.5f) + transform.forward * forwardSphere.distance;
+        // }
+        // else
+        // {
+        //     fS = (transform.position + Vector3.up * 2.5f) + transform.forward * 1f;
+        // }
+
         if(!movement.isGrounded)
         {
             RaycastHit hit = new RaycastHit();
-            validClimb = CheckClimb(ref hit);
+            
+            validClimb = CheckClimb(ref hit) && SpaceCheck();
             // Debug.Log(hit.normal);
             if((Input.GetAxisRaw("Vertical") > 0) && validClimb)
             {
@@ -33,6 +56,12 @@ public class ClimbControl2 : MonoBehaviour
                 }
             }
         }
+    }
+
+    private bool SpaceCheck()
+    {
+        RaycastHit throwAway;
+        return (!(Physics.SphereCast(transform.position, 0.5f, Vector3.up, out throwAway, 2.5f, myMask)) && !(Physics.SphereCast(transform.position + Vector3.up * 2.5f, 0.5f, transform.forward, out throwAway, 1f, myMask)));
     }
 
     private bool CheckClimb(ref RaycastHit hit)
@@ -66,6 +95,9 @@ public class ClimbControl2 : MonoBehaviour
         Gizmos.DrawRay(transform.position + transform.forward + new Vector3(0f,2f,0f), -transform.up*2.5f);
         Gizmos.color = Color.red;
         Gizmos.DrawRay(transform.position + transform.forward + new Vector3(0f,2f,0f), transform.up*1.5f);
+        // Gizmos.color = Color.blue;
+        // Gizmos.DrawWireSphere(uS, 0.5f);//up
+        // Gizmos.DrawWireSphere(fS, 0.5f);//forward
     }
 
     private void UnfreezeDelay(float time)
