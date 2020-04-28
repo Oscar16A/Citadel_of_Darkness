@@ -60,6 +60,14 @@ public class PauseMenu : MonoBehaviour
 	public void Quit()
 	{
 		print("Quitting");
+		StartCoroutine(Quit_Game());
+		//Application.Quit();
+	}
+	IEnumerator Quit_Game()
+	{
+		transition_anim.SetTrigger("TransitionLevel");
+		Popup_panel.SetActive(false);
+		yield return new WaitForSeconds(transitionTime);
 		Application.Quit();
 	}
 	public void Restore()
@@ -87,8 +95,17 @@ public class PauseMenu : MonoBehaviour
 		StatsData.volumeLevel = input;
 
 	}
+	IEnumerator MenuLoading()
+	{
+		print("LoadMenu()");
+		//transition_anim.SetTrigger("Start");
+		yield return new WaitForSeconds(transitionTime);
+		SceneManager.LoadScene("MainMenu");
+	}
 	public void LoadMenu()
 	{
+		//StartCoroutine(MenuLoading());
+		StatsData.loadingFromPauseMenu = true;
 		SceneManager.LoadScene(0);
 	}
 	
