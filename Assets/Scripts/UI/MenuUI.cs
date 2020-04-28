@@ -19,9 +19,18 @@ public class MenuUI : MonoBehaviour
 	public GameObject Title_panel;
 	public GameObject Menu_panel;
 	public GameObject Popup_panel;
+	public GameObject transitionUI_img;
 	private bool title = true;
-	
-
+		
+	public void Start()
+	{
+		if(StatsData.loadingFromPauseMenu)
+		{
+			Title_panel.SetActive(false);
+			Menu_panel.SetActive(true);
+			transitionUI_img.SetActive(false);
+		}
+	}
 	public void Update()
 	{
 		//print("update");

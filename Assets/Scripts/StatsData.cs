@@ -9,4 +9,6 @@ public static class StatsData
 	public static float mouseSensitivity = 100f;
 
 	public static float volumeLevel = 10f;
+
+	public static bool loadingFromPauseMenu = false;
 }

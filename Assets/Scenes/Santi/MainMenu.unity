@@ -1434,6 +1434,7 @@ MonoBehaviour:
   Title_panel: {fileID: 1737328849}
   Menu_panel: {fileID: 935498364}
   Popup_panel: {fileID: 995329615}
+  transitionUI_img: {fileID: 522948631}
 --- !u!95 &376643500
 Animator:
   serializedVersion: 3
@@ -1978,7 +1979,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &935498365
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2975,7 +2976,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1737328850
 MonoBehaviour:
   m_ObjectHideFlags: 0
