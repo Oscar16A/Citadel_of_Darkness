@@ -15,7 +15,7 @@ public class PlayerMovement2 : MonoBehaviour
     public Vector3 velocity;
     RaycastHit hit;
     public bool airControl;
-    Transform groundCheck;
+    public Transform groundCheck;
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
     [Header("Animation Queues")]
@@ -26,7 +26,6 @@ public class PlayerMovement2 : MonoBehaviour
     void Start()
     {
         controller = GetComponent<CharacterController>();
-        groundCheck = transform.Find("Ground Check");
         startGravity = gravity;
     }
     void Update()
@@ -98,5 +97,10 @@ public class PlayerMovement2 : MonoBehaviour
             // perform movement
             controller.Move(velocity * Time.deltaTime); //only one .Move()
         }
+    }
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(groundCheck.position, groundDistance);
     }
 }

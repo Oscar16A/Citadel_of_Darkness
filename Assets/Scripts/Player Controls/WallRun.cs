@@ -44,7 +44,7 @@ public class WallRun : MonoBehaviour
     }
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        Debug.Log(hit.normal);
+        //Debug.Log(hit.normal);
         myHit = hit;
         OnWallCheck();
     }
