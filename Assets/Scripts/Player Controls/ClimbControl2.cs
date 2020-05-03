@@ -109,6 +109,7 @@ public class ClimbControl2 : MonoBehaviour
     IEnumerator WaitSeconds(float time)
     {
         yield return new WaitForSeconds(time);
+        movement.velocity = new Vector3(0f,-2f,0f);
         movement.freeze = false;
         freeze = false;
     }
