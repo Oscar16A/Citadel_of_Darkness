@@ -64,7 +64,7 @@ public class PlayerMovement : MonoBehaviour
 
 
                 //Trigger running sounds, stop walking sounds if they are playing
-                if (!runFootstepsPlaying && (velocity.x != 0 || velocity.z != 0)) 
+                if (!runFootstepsPlaying && (velocity.x != 0 || velocity.z != 0) && isGrounded) 
                 {
                     if (walkFootstepsPlaying)
                         AkSoundEngine.PostEvent("Stop_Footsteps_Walking", gameObject);
@@ -88,7 +88,7 @@ public class PlayerMovement : MonoBehaviour
                 move *= speed;
 
                 //Trigger walking sounds, stop running sounds if they are playing
-                if (!walkFootstepsPlaying && (velocity.x != 0 || velocity.z != 0)) 
+                if (!walkFootstepsPlaying && (velocity.x != 0 || velocity.z != 0) && isGrounded) 
                 {
                     if (runFootstepsPlaying)
                         AkSoundEngine.PostEvent("Stop_Footsteps_Running", gameObject);

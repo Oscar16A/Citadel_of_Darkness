@@ -26,20 +26,52 @@
 					</ActiveSourceList>
 				</Sound>
 				<RandomSequenceContainer Name="Footsteps_Running" ID="{1DDFFC1D-2E31-4CB6-B2A2-7C20D9B418F1}" ShortID="257868291">
-					<Comment>
-</Comment>
 					<PropertyList>
+						<Property Name="Highpass" Type="int16">
+							<ValueList>
+								<Value>55</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Lowpass" Type="int16">
+							<ValueList>
+								<Value>44</Value>
+							</ValueList>
+						</Property>
 						<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>-150</Value>
+							</ValueList>
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{FF8D3E08-7EE0-4B3C-AB7D-F90507928604}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="100"/>
+											<Property Name="Min" Type="Real64" Value="-100"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
 						<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 						<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
-						<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
-						<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="2"/>
+						<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="3"/>
+						<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.5"/>
 						<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 						<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>10</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0BDF628E-F7F9-4C26-9D7E-5104A7D60CA1}"/>
+						</Reference>
+						<Reference Name="Effect0" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+							<ObjectRef Name="Hall_Large" ID="{6D154498-FF6D-4823-96FC-56841B70E079}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
 						</Reference>
 						<Reference Name="OutputBus">
 							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{429ACA35-D079-4DCC-B9A5-258EB3500152}"/>
@@ -55,6 +87,18 @@
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{429ACA35-D079-4DCC-B9A5-258EB3500152}"/>
 								</Reference>
 							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="footstep_sprinting_1" ID="{7EA4BD0C-DA76-4570-86DC-3AA2A17D42F9}">
+									<Language>SFX</Language>
+									<AudioFile>footstep_sprinting_1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="674168618"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="footstep_sprinting_1" ID="{7EA4BD0C-DA76-4570-86DC-3AA2A17D42F9}" Platform="Linked"/>
+							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Footsteps_Running_02" ID="{1BD637C7-1FED-4ABE-9D38-0C0E1494EC97}" ShortID="811483140">
 							<ReferenceList>
@@ -65,6 +109,18 @@
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{429ACA35-D079-4DCC-B9A5-258EB3500152}"/>
 								</Reference>
 							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="footstep_sprinting_2" ID="{FA1AF691-19DD-4559-82C7-683FAA88983F}">
+									<Language>SFX</Language>
+									<AudioFile>footstep_sprinting_2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="229655329"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="footstep_sprinting_2" ID="{FA1AF691-19DD-4559-82C7-683FAA88983F}" Platform="Linked"/>
+							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Footsteps_Running_03" ID="{B11E0DAE-AFA4-4BF2-A1D3-46BB8CC6228C}" ShortID="604472383">
 							<ReferenceList>
@@ -75,6 +131,18 @@
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{429ACA35-D079-4DCC-B9A5-258EB3500152}"/>
 								</Reference>
 							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="footstep_sprinting_3" ID="{C85A7D68-CDA0-4880-A69E-7B0BC21F6C95}">
+									<Language>SFX</Language>
+									<AudioFile>footstep_sprinting_3.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="383476147"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="footstep_sprinting_3" ID="{C85A7D68-CDA0-4880-A69E-7B0BC21F6C95}" Platform="Linked"/>
+							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Footsteps_Running_04" ID="{F69E298A-7292-4C8D-81D7-636AB11A5787}" ShortID="109743384">
 							<ReferenceList>
@@ -85,25 +153,48 @@
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{429ACA35-D079-4DCC-B9A5-258EB3500152}"/>
 								</Reference>
 							</ReferenceList>
-						</Sound>
-						<Sound Name="Footsteps_Running_05" ID="{BBF67787-73CA-41EB-B21A-448AED6B33B5}" ShortID="1028622584">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0BDF628E-F7F9-4C26-9D7E-5104A7D60CA1}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{429ACA35-D079-4DCC-B9A5-258EB3500152}"/>
-								</Reference>
-							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="footstep_sprinting_4" ID="{9CB93074-EF9C-4D7D-B4DE-0EB58AD5F91F}">
+									<Language>SFX</Language>
+									<AudioFile>footstep_sprinting_4.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="842434766"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="footstep_sprinting_4" ID="{9CB93074-EF9C-4D7D-B4DE-0EB58AD5F91F}" Platform="Linked"/>
+							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
 				</RandomSequenceContainer>
 				<RandomSequenceContainer Name="Footsteps_Walking" ID="{41F370FB-EA37-4724-9485-A1AE32F3BF0B}" ShortID="926700994">
 					<PropertyList>
+						<Property Name="Highpass" Type="int16">
+							<ValueList>
+								<Value>40</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>100</Value>
+							</ValueList>
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{407C7EE7-5206-40D5-88D1-CEF299D9AA1E}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="200"/>
+											<Property Name="Min" Type="Real64" Value="-100"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
 						<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 						<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
 						<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="3"/>
-						<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.6"/>
+						<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.35"/>
 						<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 					</PropertyList>
 					<ReferenceList>
@@ -125,7 +216,6 @@
 										<ModifierInfo>
 											<Modifier Name="" ID="{353E7AAB-BCAE-4B35-99CB-85C4B74DE52D}">
 												<PropertyList>
-													<Property Name="Enabled" Type="bool" Value="True"/>
 													<Property Name="Max" Type="Real64" Value="51"/>
 													<Property Name="Min" Type="Real64" Value="-51"/>
 												</PropertyList>
@@ -162,7 +252,6 @@
 										<ModifierInfo>
 											<Modifier Name="" ID="{A554A922-E958-4064-BF55-DDDC25BB1B3D}">
 												<PropertyList>
-													<Property Name="Enabled" Type="bool" Value="True"/>
 													<Property Name="Max" Type="Real64" Value="51"/>
 													<Property Name="Min" Type="Real64" Value="-51"/>
 												</PropertyList>
@@ -199,13 +288,17 @@
 										<ModifierInfo>
 											<Modifier Name="" ID="{5C596650-06B2-4984-8333-64B27A75C43F}">
 												<PropertyList>
-													<Property Name="Enabled" Type="bool" Value="True"/>
 													<Property Name="Max" Type="Real64" Value="51"/>
 													<Property Name="Min" Type="Real64" Value="-25"/>
 												</PropertyList>
 											</Modifier>
 										</ModifierInfo>
 									</ModifierList>
+								</Property>
+								<Property Name="Weight" Type="Real64">
+									<ValueList>
+										<Value>5</Value>
+									</ValueList>
 								</Property>
 							</PropertyList>
 							<ReferenceList>
@@ -482,6 +575,130 @@
 							</ChildrenList>
 							<ActiveSourceList>
 								<ActiveSource Name="jump_landing_3" ID="{C41905D0-2CDE-41CF-BA99-A78AF74A1862}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
+				<RandomSequenceContainer Name="Footsteps_Sprinting" ID="{58885BB1-98F9-4467-850B-7C15B8EF4B8A}" ShortID="159440019">
+					<PropertyList>
+						<Property Name="Highpass" Type="int16">
+							<ValueList>
+								<Value>40</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>150</Value>
+							</ValueList>
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{978F38ED-A45F-4329-87AC-2FB823BD10C9}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="250"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+						<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+						<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="3"/>
+						<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.3"/>
+						<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0BDF628E-F7F9-4C26-9D7E-5104A7D60CA1}"/>
+						</Reference>
+						<Reference Name="Effect0" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+							<ObjectRef Name="Hall_Large" ID="{6D154498-FF6D-4823-96FC-56841B70E079}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{429ACA35-D079-4DCC-B9A5-258EB3500152}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Footsteps_Walking_01" ID="{1C0B6E55-476E-4FDC-BC37-FAD717A415A4}" ShortID="545183100">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0BDF628E-F7F9-4C26-9D7E-5104A7D60CA1}"/>
+								</Reference>
+								<Reference Name="Effect0" CompanyID="4095" PluginID="65535" PluginType="15">
+									<ObjectRef Name="Hall_Large" ID="{6D154498-FF6D-4823-96FC-56841B70E079}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{429ACA35-D079-4DCC-B9A5-258EB3500152}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="footstep_walking_1" ID="{6A80838F-EE74-4C9A-8EA6-7C29EC835AC5}">
+									<Language>SFX</Language>
+									<AudioFile>footstep_walking_1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="29352538"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="footstep_walking_1" ID="{6A80838F-EE74-4C9A-8EA6-7C29EC835AC5}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Footsteps_Walking_02" ID="{1377382C-A96B-4F15-9A1D-C66F189E247E}" ShortID="489987767">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0BDF628E-F7F9-4C26-9D7E-5104A7D60CA1}"/>
+								</Reference>
+								<Reference Name="Effect0" CompanyID="4095" PluginID="65535" PluginType="15">
+									<ObjectRef Name="Hall_Large" ID="{6D154498-FF6D-4823-96FC-56841B70E079}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{429ACA35-D079-4DCC-B9A5-258EB3500152}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="footstep_walking_2" ID="{143A4843-2447-4B4E-A6C9-EA889C993479}">
+									<Language>SFX</Language>
+									<AudioFile>footstep_walking_2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="182811041"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="footstep_walking_2" ID="{143A4843-2447-4B4E-A6C9-EA889C993479}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Footsteps_Walking_03" ID="{2AD75A3C-3E69-4423-B95D-5F57F4E96F79}" ShortID="32455993">
+							<PropertyList>
+								<Property Name="Weight" Type="Real64">
+									<ValueList>
+										<Value>5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0BDF628E-F7F9-4C26-9D7E-5104A7D60CA1}"/>
+								</Reference>
+								<Reference Name="Effect0" CompanyID="4095" PluginID="65535" PluginType="15">
+									<ObjectRef Name="Hall_Large" ID="{6D154498-FF6D-4823-96FC-56841B70E079}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{429ACA35-D079-4DCC-B9A5-258EB3500152}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="footstep_walking_3" ID="{CDF8A0F0-DDE1-4386-B31F-047CAE002978}">
+									<Language>SFX</Language>
+									<AudioFile>footstep_walking_3.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="981710280"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="footstep_walking_3" ID="{CDF8A0F0-DDE1-4386-B31F-047CAE002978}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
