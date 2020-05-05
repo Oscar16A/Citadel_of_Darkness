@@ -116,6 +116,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Jump_Landing_Cloth" ID="{882A518D-04B5-4895-A876-6B4F50F74ED6}">
+					<ChildrenList>
+						<Action Name="" ID="{B69364A1-B712-4D06-A002-E300FB5CE99A}" ShortID="332242022">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Jump_Landing_Cloth" ID="{7D426F75-37A0-49CE-B6B8-D2ED2C4F1DC7}" WorkUnitID="{471DBAFB-3C9D-4167-8D59-F2033C0E6C08}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

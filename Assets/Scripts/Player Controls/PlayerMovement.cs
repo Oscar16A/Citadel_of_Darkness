@@ -26,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
     //For checking to see if the footstep sounds are playing.
     private bool walkFootstepsPlaying = false;
     private bool runFootstepsPlaying = false;
+    private bool landingPlayed = true; //True if the landing sound has played after jumping.
 
     void Start()
     {
@@ -131,7 +132,7 @@ public class PlayerMovement : MonoBehaviour
             controller.Move(velocity * Time.deltaTime); //only one .Move()
         }
 
-        //Stops footsteps from playing if the player is in the air
+        //Stops footsteps from playing if the player is in the air, sets landingPlayed to false
         if (!isGrounded)
         {
             if (runFootstepsPlaying)
@@ -141,6 +142,14 @@ public class PlayerMovement : MonoBehaviour
 
             walkFootstepsPlaying = false;
             runFootstepsPlaying = false;
-        }            
+
+            landingPlayed = false;
+        }
+        else if (!landingPlayed)
+        {
+            AkSoundEngine.PostEvent("Play_Jump_Landing", gameObject);
+            AkSoundEngine.PostEvent("Play_Jump_Landing_Cloth", gameObject);
+            landingPlayed = true;
+        }                
     }
 }

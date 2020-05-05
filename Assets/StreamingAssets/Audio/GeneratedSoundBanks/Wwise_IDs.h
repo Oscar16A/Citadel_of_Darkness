@@ -16,6 +16,7 @@ namespace AK
         static const AkUniqueID PLAY_FOOTSTEPS_RUNNING = 203814959U;
         static const AkUniqueID PLAY_FOOTSTEPS_WALKING = 1871925003U;
         static const AkUniqueID PLAY_JUMP_LANDING = 3808321334U;
+        static const AkUniqueID PLAY_JUMP_LANDING_CLOTH = 2384510883U;
         static const AkUniqueID PLAY_TURTLE_SQUEAL = 4213462902U;
         static const AkUniqueID STOP_FOOTSTEPS_RUNNING = 3603051261U;
         static const AkUniqueID STOP_FOOTSTEPS_WALKING = 2120730845U;
