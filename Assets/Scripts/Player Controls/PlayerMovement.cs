@@ -26,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
     //For checking to see if the footstep sounds are playing.
     private bool walkFootstepsPlaying = false;
     private bool runFootstepsPlaying = false;
+    private bool landingPlayed = true; //True if the landing sound has played after jumping.
 
     void Start()
     {
@@ -64,7 +65,7 @@ public class PlayerMovement : MonoBehaviour
 
 
                 //Trigger running sounds, stop walking sounds if they are playing
-                if (!runFootstepsPlaying && (velocity.x != 0 || velocity.z != 0)) 
+                if (!runFootstepsPlaying && (velocity.x != 0 || velocity.z != 0) && isGrounded) 
                 {
                     if (walkFootstepsPlaying)
                         AkSoundEngine.PostEvent("Stop_Footsteps_Walking", gameObject);
@@ -88,7 +89,7 @@ public class PlayerMovement : MonoBehaviour
                 move *= speed;
 
                 //Trigger walking sounds, stop running sounds if they are playing
-                if (!walkFootstepsPlaying && (velocity.x != 0 || velocity.z != 0)) 
+                if (!walkFootstepsPlaying && (velocity.x != 0 || velocity.z != 0) && isGrounded) 
                 {
                     if (runFootstepsPlaying)
                         AkSoundEngine.PostEvent("Stop_Footsteps_Running", gameObject);
@@ -131,7 +132,7 @@ public class PlayerMovement : MonoBehaviour
             controller.Move(velocity * Time.deltaTime); //only one .Move()
         }
 
-        //Stops footsteps from playing if the player is in the air
+        //Stops footsteps from playing if the player is in the air, sets landingPlayed to false
         if (!isGrounded)
         {
             if (runFootstepsPlaying)
@@ -141,6 +142,14 @@ public class PlayerMovement : MonoBehaviour
 
             walkFootstepsPlaying = false;
             runFootstepsPlaying = false;
-        }            
+
+            landingPlayed = false;
+        }
+        else if (!landingPlayed)
+        {
+            AkSoundEngine.PostEvent("Play_Jump_Landing", gameObject);
+            AkSoundEngine.PostEvent("Play_Jump_Landing_Cloth", gameObject);
+            landingPlayed = true;
+        }                
     }
 }

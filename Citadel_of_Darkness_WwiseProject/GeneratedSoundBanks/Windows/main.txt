@@ -2,6 +2,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	203814959	Play_Footsteps_Running			\Default Work Unit\Play_Footsteps_Running	
 	1871925003	Play_Footsteps_Walking			\Default Work Unit\Play_Footsteps_Walking	
 	2120730845	Stop_Footsteps_Walking			\Default Work Unit\Stop_Footsteps_Walking	
+	2384510883	Play_Jump_Landing_Cloth			\Default Work Unit\Play_Jump_Landing_Cloth	
 	3603051261	Stop_Footsteps_Running			\Default Work Unit\Stop_Footsteps_Running	
 	3808321334	Play_Jump_Landing			\Default Work Unit\Play_Jump_Landing	
 	4213462902	Play_Turtle_Squeal			\Default Work Unit\Play_Turtle_Squeal	
@@ -14,6 +15,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	182811041	Footsteps_Walking_02	D:\GitHub\Citadel_of_Darkness\Citadel_of_Darkness_WwiseProject\.cache\Windows\SFX\footstep_walking_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps_Walking\Footsteps_Walking_02		45076
 	284850333	Jump_Landing_03	D:\GitHub\Citadel_of_Darkness\Citadel_of_Darkness_WwiseProject\.cache\Windows\SFX\jump_landing_3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Jump_Landing\Jump_Landing_03		34900
 	318515670	Turtle Squeal	D:\GitHub\Citadel_of_Darkness\Citadel_of_Darkness_WwiseProject\.cache\Windows\SFX\Turtle Squeal_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Turtle Squeal		1057712
+	757538133	Jump_Landing_Cloth	D:\GitHub\Citadel_of_Darkness\Citadel_of_Darkness_WwiseProject\.cache\Windows\SFX\jump_landing_cloth_3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Jump_Landing_Cloth		75608
 	804107894	Jump_Landing_02	D:\GitHub\Citadel_of_Darkness\Citadel_of_Darkness_WwiseProject\.cache\Windows\SFX\jump_landing_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Jump_Landing\Jump_Landing_02		34900
 	944141105	Jump_Landing_01	D:\GitHub\Citadel_of_Darkness\Citadel_of_Darkness_WwiseProject\.cache\Windows\SFX\jump_landing_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Jump_Landing\Jump_Landing_01		36596
 	981710280	Footsteps_Walking_03	D:\GitHub\Citadel_of_Darkness\Citadel_of_Darkness_WwiseProject\.cache\Windows\SFX\footstep_walking_3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps_Walking\Footsteps_Walking_03		31508

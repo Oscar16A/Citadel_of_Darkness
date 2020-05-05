@@ -40,7 +40,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 0e0e82bd22d2f44bbb9e0cbc5aaa7070
     GuidInternal: 
-    m_lastTime: -8586140768221372240
+    m_lastTime: -8586129225809559290
     List:
     - name: Main
       guid: de2f5fa84f1a1b4f9c720a7eceb62031
@@ -56,7 +56,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 258f7bbf3c27b64f8832182924e218f1
     GuidInternal: 
-    m_lastTime: -8586151384239672279
+    m_lastTime: -8586129225809658645
     List:
     - name: Play_Footsteps_Running
       guid: 3a58120f317a0b42ab9d513dc4d16b07
@@ -118,6 +118,18 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.206735
       minDuration: 0.19712
+    - name: Play_Jump_Landing_Cloth
+      guid: 8d512a88b5049548a8766b4f50f74ed6
+      id: 2384510883
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Jump_Landing_Cloth
+        ObjectType: 3
+      Path: Default Work Unit\Play_Jump_Landing_Cloth
+      maxAttenuation: 0
+      maxDuration: 0.440429
+      minDuration: 0.403875
     - name: Play_Turtle_Squeal
       guid: 603a342b92172e4293810a6e910e1ad8
       id: 4213462902

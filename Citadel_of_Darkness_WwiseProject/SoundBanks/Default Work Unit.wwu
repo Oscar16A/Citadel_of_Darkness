@@ -10,6 +10,7 @@
 						<ObjectRef Name="Play_Footsteps_Walking" ID="{44035062-FEC3-42AC-9963-74EF8ABEA7A1}" WorkUnitID="{BF7B8F25-273C-4FB6-8832-182924E218F1}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_Footsteps_Walking" ID="{268B2F78-B527-433B-9AFC-0B3A1DBAD3E5}" WorkUnitID="{BF7B8F25-273C-4FB6-8832-182924E218F1}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Jump_Landing" ID="{89CBF339-9057-4608-BCED-292E6472EED5}" WorkUnitID="{BF7B8F25-273C-4FB6-8832-182924E218F1}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Jump_Landing_Cloth" ID="{882A518D-04B5-4895-A876-6B4F50F74ED6}" WorkUnitID="{BF7B8F25-273C-4FB6-8832-182924E218F1}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_Footsteps_Running" ID="{1A5C348C-2DD7-4D4F-B986-5E46562A25D7}" WorkUnitID="{BF7B8F25-273C-4FB6-8832-182924E218F1}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>

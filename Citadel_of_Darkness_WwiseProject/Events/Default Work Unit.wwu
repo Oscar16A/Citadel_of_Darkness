@@ -19,7 +19,7 @@
 						<Action Name="" ID="{A044BEE7-4E91-4702-9166-3B1430A46F28}" ShortID="910756713">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Footsteps_Running" ID="{1DDFFC1D-2E31-4CB6-B2A2-7C20D9B418F1}" WorkUnitID="{471DBAFB-3C9D-4167-8D59-F2033C0E6C08}"/>
+									<ObjectRef Name="Footsteps_Sprinting" ID="{58885BB1-98F9-4467-850B-7C15B8EF4B8A}" WorkUnitID="{471DBAFB-3C9D-4167-8D59-F2033C0E6C08}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -30,10 +30,11 @@
 						<Action Name="" ID="{A826D502-9809-4B1D-A4B0-0650DF7EFB7B}" ShortID="628643464">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="2.5"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Footsteps_Running" ID="{1DDFFC1D-2E31-4CB6-B2A2-7C20D9B418F1}" WorkUnitID="{471DBAFB-3C9D-4167-8D59-F2033C0E6C08}"/>
+									<ObjectRef Name="Footsteps_Sprinting" ID="{58885BB1-98F9-4467-850B-7C15B8EF4B8A}" WorkUnitID="{471DBAFB-3C9D-4167-8D59-F2033C0E6C08}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -42,6 +43,9 @@
 				<Event Name="Play_Footsteps_Walking" ID="{44035062-FEC3-42AC-9963-74EF8ABEA7A1}">
 					<ChildrenList>
 						<Action Name="" ID="{7B4A82EC-4674-4F0E-918E-FA22BA992DE8}" ShortID="808426537">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="0.003"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Footsteps_Walking" ID="{41F370FB-EA37-4724-9485-A1AE32F3BF0B}" WorkUnitID="{471DBAFB-3C9D-4167-8D59-F2033C0E6C08}"/>
@@ -55,6 +59,7 @@
 						<Action Name="" ID="{54414386-E0C3-414C-AA21-461E78B5759E}" ShortID="904530272">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="2.5"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -106,6 +111,17 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Jump_Landing" ID="{7E39CAA5-5CAB-4992-9FDB-206F9ED4D4D8}" WorkUnitID="{471DBAFB-3C9D-4167-8D59-F2033C0E6C08}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Jump_Landing_Cloth" ID="{882A518D-04B5-4895-A876-6B4F50F74ED6}">
+					<ChildrenList>
+						<Action Name="" ID="{B69364A1-B712-4D06-A002-E300FB5CE99A}" ShortID="332242022">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Jump_Landing_Cloth" ID="{7D426F75-37A0-49CE-B6B8-D2ED2C4F1DC7}" WorkUnitID="{471DBAFB-3C9D-4167-8D59-F2033C0E6C08}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

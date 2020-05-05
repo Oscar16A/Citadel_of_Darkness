@@ -21,7 +21,22 @@
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<IncludedEvents>
-				<Event Id="203814959" Name="Play_Footsteps_Running" ObjectPath="\Events\Default Work Unit\Play_Footsteps_Running" DurationType="Infinite"/>
+				<Event Id="203814959" Name="Play_Footsteps_Running" ObjectPath="\Events\Default Work Unit\Play_Footsteps_Running" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="29352538" Language="SFX">
+							<ShortName>footstep_walking_1.wav</ShortName>
+							<Path>SFX\footstep_walking_1_10C4C929.wem</Path>
+						</File>
+						<File Id="182811041" Language="SFX">
+							<ShortName>footstep_walking_2.wav</ShortName>
+							<Path>SFX\footstep_walking_2_10C4C929.wem</Path>
+						</File>
+						<File Id="981710280" Language="SFX">
+							<ShortName>footstep_walking_3.wav</ShortName>
+							<Path>SFX\footstep_walking_3_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="1871925003" Name="Play_Footsteps_Walking" ObjectPath="\Events\Default Work Unit\Play_Footsteps_Walking" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="29352538" Language="SFX">
@@ -51,6 +66,14 @@
 						<File Id="944141105" Language="SFX">
 							<ShortName>jump_landing_1.wav</ShortName>
 							<Path>SFX\jump_landing_1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2384510883" Name="Play_Jump_Landing_Cloth" ObjectPath="\Events\Default Work Unit\Play_Jump_Landing_Cloth" DurationType="OneShot" DurationMin="0.403875" DurationMax="0.440429">
+					<IncludedMemoryFiles>
+						<File Id="757538133" Language="SFX">
+							<ShortName>jump_landing_cloth_3.wav</ShortName>
+							<Path>SFX\jump_landing_cloth_3_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
