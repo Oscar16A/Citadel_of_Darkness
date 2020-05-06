@@ -11,7 +11,12 @@ ModelImporter:
     2300000: g_Group3408_Group3408
     3300000: g_Group3408_Group3408
     4300000: g_Group3408_Group3408
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: g_Group3408_Group3408Mat
+    second: {fileID: 2100000, guid: ded37d351201baf4aac0edd9b4d4c87f, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
