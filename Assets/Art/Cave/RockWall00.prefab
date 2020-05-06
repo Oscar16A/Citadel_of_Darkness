@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5672108257316577568
+--- !u!1 &793115365779908629
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,30 +8,30 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5672108257316814080}
-  m_Layer: 9
+  - component: {fileID: 793115365779485749}
+  m_Layer: 0
   m_Name: RockWall00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5672108257316814080
+--- !u!4 &793115365779485749
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5672108257316577568}
+  m_GameObject: {fileID: 793115365779908629}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 13.138592, y: 3.37, z: -8.26}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 5672108257316814082}
+  - {fileID: 793115365779485751}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &5672108257316577570
+--- !u!1 &793115365779908631
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -39,46 +39,46 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5672108257316814082}
-  - component: {fileID: 5672108257315519778}
-  - component: {fileID: 5672108257314389986}
-  - component: {fileID: 8862252809262174770}
-  m_Layer: 9
+  - component: {fileID: 793115365779485751}
+  - component: {fileID: 793115365776618519}
+  - component: {fileID: 793115365777716951}
+  - component: {fileID: 8508922411245851296}
+  m_Layer: 0
   m_Name: g_Group3408_Group3408
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5672108257316814082
+--- !u!4 &793115365779485751
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5672108257316577570}
+  m_GameObject: {fileID: 793115365779908631}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9, y: 0, z: -5}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 5672108257316814080}
+  m_Father: {fileID: 793115365779485749}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &5672108257315519778
+--- !u!33 &793115365776618519
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5672108257316577570}
+  m_GameObject: {fileID: 793115365779908631}
   m_Mesh: {fileID: 4300000, guid: 5a0950619b345df4eb0a5904c622a4ef, type: 3}
---- !u!23 &5672108257314389986
+--- !u!23 &793115365777716951
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5672108257316577570}
+  m_GameObject: {fileID: 793115365779908631}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -109,16 +109,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &8862252809262174770
+--- !u!65 &8508922411245851296
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5672108257316577570}
+  m_GameObject: {fileID: 793115365779908631}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: 6.4631906, y: 8.00192, z: 5.87938}
-  m_Center: {x: -9.343805, y: 0.48944998, z: 0.101040006}
+  m_Size: {x: 6.46319, y: 8.00192, z: 5.941626}
+  m_Center: {x: -9.343805, y: 0.48944998, z: 0.06991696}
