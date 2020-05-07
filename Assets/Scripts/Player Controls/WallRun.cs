@@ -18,6 +18,7 @@ public class WallRun : MonoBehaviour
     private float startGravity;
     private float timeLeft;
     private ControllerColliderHit myHit;
+    public Animator Anim;
     private void Start()
     {
         movement = GetComponent<PlayerMovement2>();
@@ -29,7 +30,6 @@ public class WallRun : MonoBehaviour
 
     private void Update()
     {
-        //Debug.Log(stance);
         //check if still on wall
         OffWallCheck();
 
@@ -40,13 +40,37 @@ public class WallRun : MonoBehaviour
         else
         {
             movement.freezeY = false;
+            stance = Lean.None;         
         }
+        Debug.Log(stance);
+        UpdateAnim();
     }
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
         //Debug.Log(hit.normal);
         myHit = hit;
         OnWallCheck();
+    }
+    private void UpdateAnim()
+    {
+        switch (stance)
+        {
+            case Lean.None:
+                Anim.SetTrigger("No Lean");
+                Anim.ResetTrigger("Right Lean");
+                Anim.ResetTrigger("Left Lean");
+                break;
+            case Lean.Right:
+                Anim.ResetTrigger("No Lean");
+                Anim.SetTrigger("Right Lean");
+                Anim.ResetTrigger("Left Lean");
+                break;
+            case Lean.Left:
+                Anim.ResetTrigger("No Lean");
+                Anim.ResetTrigger("Right Lean");
+                Anim.SetTrigger("Left Lean");
+                break;
+        }
     }
     private void OffWallCheck()
     {
