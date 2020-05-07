@@ -25,16 +25,11 @@
 						<ActiveSource Name="Turtle Squeal" ID="{D0116F14-2738-4239-9BA6-D343BF6D9186}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
-				<RandomSequenceContainer Name="Footsteps_Running" ID="{1DDFFC1D-2E31-4CB6-B2A2-7C20D9B418F1}" ShortID="257868291">
+				<RandomSequenceContainer Name="Footsteps_Wall_Running" ID="{1DDFFC1D-2E31-4CB6-B2A2-7C20D9B418F1}" ShortID="257868291">
 					<PropertyList>
 						<Property Name="Highpass" Type="int16">
 							<ValueList>
-								<Value>55</Value>
-							</ValueList>
-						</Property>
-						<Property Name="Lowpass" Type="int16">
-							<ValueList>
-								<Value>44</Value>
+								<Value>23</Value>
 							</ValueList>
 						</Property>
 						<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
@@ -57,12 +52,12 @@
 						<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 						<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
 						<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="3"/>
-						<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.5"/>
+						<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.3"/>
 						<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 						<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>10</Value>
+								<Value>-2</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -321,68 +316,6 @@
 							<ActiveSourceList>
 								<ActiveSource Name="footstep_walking_3" ID="{1C4DDD57-D8B4-4D1F-853D-2AD29D3EAF8E}" Platform="Linked"/>
 							</ActiveSourceList>
-						</Sound>
-					</ChildrenList>
-				</RandomSequenceContainer>
-				<RandomSequenceContainer Name="Footsteps_Wall_Run" ID="{B0BD6B01-EDD2-4DB5-BF27-A508E6B3880F}" ShortID="502380398">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0BDF628E-F7F9-4C26-9D7E-5104A7D60CA1}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{429ACA35-D079-4DCC-B9A5-258EB3500152}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<Sound Name="Footsteps_Wall_Run_01" ID="{D763CE97-14DC-4268-A189-7221BE046CF0}" ShortID="798576097">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0BDF628E-F7F9-4C26-9D7E-5104A7D60CA1}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{429ACA35-D079-4DCC-B9A5-258EB3500152}"/>
-								</Reference>
-							</ReferenceList>
-						</Sound>
-						<Sound Name="Footsteps_Wall_Run_02" ID="{6A4BFECB-6DFD-4A96-A78A-BD5989F7EA96}" ShortID="1012547450">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0BDF628E-F7F9-4C26-9D7E-5104A7D60CA1}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{429ACA35-D079-4DCC-B9A5-258EB3500152}"/>
-								</Reference>
-							</ReferenceList>
-						</Sound>
-						<Sound Name="Footsteps_Wall_Run_03" ID="{B80F1732-0530-4DE4-B70C-D995BBE5203F}" ShortID="571129329">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0BDF628E-F7F9-4C26-9D7E-5104A7D60CA1}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{429ACA35-D079-4DCC-B9A5-258EB3500152}"/>
-								</Reference>
-							</ReferenceList>
-						</Sound>
-						<Sound Name="Footsteps_Wall_Run_04" ID="{E19D7C73-0855-4466-98F0-F6C1C9DAE3B8}" ShortID="992441624">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0BDF628E-F7F9-4C26-9D7E-5104A7D60CA1}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{429ACA35-D079-4DCC-B9A5-258EB3500152}"/>
-								</Reference>
-							</ReferenceList>
-						</Sound>
-						<Sound Name="Footsteps_Wall_Run_05" ID="{0D554E24-5B85-470A-987E-1FBEF0D90C5E}" ShortID="1019294937">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0BDF628E-F7F9-4C26-9D7E-5104A7D60CA1}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{429ACA35-D079-4DCC-B9A5-258EB3500152}"/>
-								</Reference>
-							</ReferenceList>
 						</Sound>
 					</ChildrenList>
 				</RandomSequenceContainer>

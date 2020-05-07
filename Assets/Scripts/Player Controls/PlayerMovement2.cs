@@ -23,6 +23,12 @@ public class PlayerMovement2 : MonoBehaviour
     public bool walking;
     public bool freeze = false;
     public bool freezeY = false;
+
+    //For checking to see if the footstep sounds are playing.
+    private bool walkFootstepsPlaying = false;
+    private bool runFootstepsPlaying = false;
+    private bool landingPlayed = true; //True if the landing sound has played after jumping.
+
     void Start()
     {
         controller = GetComponent<CharacterController>();
@@ -56,6 +62,23 @@ public class PlayerMovement2 : MonoBehaviour
             if(Input.GetButton("Sprint")) //sprint
             {
                 move *= sprintSpeed;
+
+                //AUDIO
+                //Trigger running sounds, stop walking sounds if they are playing
+                if (!runFootstepsPlaying && (velocity.x != 0 || velocity.z != 0) && isGrounded) 
+                {
+                    if (walkFootstepsPlaying)
+                        AkSoundEngine.PostEvent("Stop_Footsteps_Walking", gameObject);
+                    AkSoundEngine.PostEvent("Play_Footsteps_Running", gameObject);
+                    runFootstepsPlaying = true;
+                    walkFootstepsPlaying = false;
+                }
+                //Stop running sounds if not moving
+                else if ( (velocity.x == 0 && velocity.z == 0)) 
+                {
+                    AkSoundEngine.PostEvent("Stop_Footsteps_Running", gameObject);
+                    runFootstepsPlaying = false;
+                }      
             }
             else if(Input.GetButton("Crouch")) //crouch
             {
@@ -64,6 +87,23 @@ public class PlayerMovement2 : MonoBehaviour
             else //walk
             {
                 move *= speed;
+
+                //AUDIO
+                //Trigger walking sounds, stop running sounds if they are playing
+                if (!walkFootstepsPlaying && (velocity.x != 0 || velocity.z != 0) && isGrounded) 
+                {
+                    if (runFootstepsPlaying)
+                        AkSoundEngine.PostEvent("Stop_Footsteps_Running", gameObject);
+                    AkSoundEngine.PostEvent("Play_Footsteps_Walking", gameObject);
+                    walkFootstepsPlaying = true;
+                    runFootstepsPlaying = false;
+                }
+                //stop walking sounds if not moving
+                else if ( (velocity.x == 0 && velocity.z == 0)) 
+                {
+                    AkSoundEngine.PostEvent("Stop_Footsteps_Walking", gameObject);
+                    walkFootstepsPlaying = false;
+                }
             }
             if(isGrounded || airControl)
             {
@@ -97,6 +137,26 @@ public class PlayerMovement2 : MonoBehaviour
             // perform movement
             controller.Move(velocity * Time.deltaTime); //only one .Move()
         }
+
+        //Stops footsteps from playing if the player is in the air, sets landingPlayed to false
+        if (!isGrounded)
+        {
+            if (runFootstepsPlaying)
+                AkSoundEngine.PostEvent("Stop_Footsteps_Running", gameObject);
+            if (walkFootstepsPlaying)
+                AkSoundEngine.PostEvent("Stop_Footsteps_Walking", gameObject);
+
+            walkFootstepsPlaying = false;
+            runFootstepsPlaying = false;
+
+            landingPlayed = false;
+        }
+        else if (!landingPlayed)
+        {
+            AkSoundEngine.PostEvent("Play_Jump_Landing", gameObject);
+            AkSoundEngine.PostEvent("Play_Jump_Landing_Cloth", gameObject);
+            landingPlayed = true;
+        }                
     }
     private void OnDrawGizmos()
     {

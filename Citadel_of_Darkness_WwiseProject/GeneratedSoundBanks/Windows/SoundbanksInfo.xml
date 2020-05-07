@@ -53,6 +53,26 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="3106752070" Name="Play_Footsteps_Wall_Running" ObjectPath="\Events\Default Work Unit\Play_Footsteps_Wall_Running" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="229655329" Language="SFX">
+							<ShortName>footstep_sprinting_2.wav</ShortName>
+							<Path>SFX\footstep_sprinting_2_10C4C929.wem</Path>
+						</File>
+						<File Id="383476147" Language="SFX">
+							<ShortName>footstep_sprinting_3.wav</ShortName>
+							<Path>SFX\footstep_sprinting_3_10C4C929.wem</Path>
+						</File>
+						<File Id="674168618" Language="SFX">
+							<ShortName>footstep_sprinting_1.wav</ShortName>
+							<Path>SFX\footstep_sprinting_1_10C4C929.wem</Path>
+						</File>
+						<File Id="842434766" Language="SFX">
+							<ShortName>footstep_sprinting_4.wav</ShortName>
+							<Path>SFX\footstep_sprinting_4_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="3808321334" Name="Play_Jump_Landing" ObjectPath="\Events\Default Work Unit\Play_Jump_Landing" DurationType="OneShot" DurationMin="0.197120" DurationMax="0.206735">
 					<IncludedMemoryFiles>
 						<File Id="284850333" Language="SFX">
@@ -87,6 +107,7 @@
 				</Event>
 				<Event Id="3603051261" Name="Stop_Footsteps_Running" ObjectPath="\Events\Default Work Unit\Stop_Footsteps_Running" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="2120730845" Name="Stop_Footsteps_Walking" ObjectPath="\Events\Default Work Unit\Stop_Footsteps_Walking" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1174869440" Name="Stop_Footsteps_Wall_Running" ObjectPath="\Events\Default Work Unit\Stop_Footsteps_Wall_Running" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 			</IncludedEvents>
 		</SoundBank>
 	</SoundBanks>
