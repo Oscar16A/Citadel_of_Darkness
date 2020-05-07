@@ -61,7 +61,8 @@ public class ClimbControl2 : MonoBehaviour
     private bool SpaceCheck()
     {
         RaycastHit throwAway;
-        return (!(Physics.SphereCast(transform.position, 0.5f, Vector3.up, out throwAway, 2.5f, myMask)) && !(Physics.SphereCast(transform.position + Vector3.up * 2.5f, 0.5f, transform.forward, out throwAway, 1f, myMask)));
+        return (!(Physics.SphereCast(transform.position, 0.5f, Vector3.up, out throwAway, 2.5f, myMask)) && 
+                !(Physics.SphereCast(transform.position + Vector3.up * 2.5f, 0.5f, transform.forward, out throwAway, 1f, myMask)));
     }
 
     private bool CheckClimb(ref RaycastHit hit)
@@ -70,7 +71,8 @@ public class ClimbControl2 : MonoBehaviour
         {
             if(Vector3.Angle(hit.normal, Vector3.up) <= angleTolerance)
             {
-                if(!Physics.Raycast(transform.position + transform.forward + new Vector3(0f,2f,0f), transform.up, 1.5f, myMask))
+                RaycastHit throwAway;
+                if(!Physics.SphereCast(hit.point, 0.6f, Vector3.up, out throwAway, 2f, myMask))
                 {
                     return true;
                 }
@@ -93,8 +95,6 @@ public class ClimbControl2 : MonoBehaviour
     {
         Gizmos.color = Color.green;
         Gizmos.DrawRay(transform.position + transform.forward + new Vector3(0f,2f,0f), -transform.up*2.5f);
-        Gizmos.color = Color.red;
-        Gizmos.DrawRay(transform.position + transform.forward + new Vector3(0f,2f,0f), transform.up*1.5f);
         // Gizmos.color = Color.blue;
         // Gizmos.DrawWireSphere(uS, 0.5f);//up
         // Gizmos.DrawWireSphere(fS, 0.5f);//forward

@@ -42,12 +42,10 @@ public class WallRun : MonoBehaviour
             movement.freezeY = false;
             stance = Lean.None;         
         }
-        Debug.Log(stance);
         UpdateAnim();
     }
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        //Debug.Log(hit.normal);
         myHit = hit;
         OnWallCheck();
     }
