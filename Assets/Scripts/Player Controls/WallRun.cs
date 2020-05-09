@@ -122,7 +122,7 @@ public class WallRun : MonoBehaviour
         runTimer -= Time.deltaTime;
         movement.freezeY = true;
         movement.slideOff = false;
-        Debug.Log(Vector3.SignedAngle(myHit.normal, transform.forward, Vector3.up));
+        // Debug.Log(Vector3.SignedAngle(myHit.normal, transform.forward, Vector3.up));
         if((Vector3.SignedAngle(myHit.normal, transform.forward, Vector3.up) > 22.5f) && (Input.GetAxisRaw("Vertical") > 0f) && (runTimer > 0f))//wall right
         {
             Vector3 direction = Vector3.Normalize(new Vector3(myHit.normal.x, 0f, myHit.normal.z));
@@ -156,7 +156,8 @@ public class WallRun : MonoBehaviour
 
         if(runTimer < 1.5f)
         {
-            movement.freezeY=false;
+            movement.freezeY = false;
+            movement.slideOff = true;
         }
 
         if(Input.GetButtonDown("Jump") && jumpBuffer)

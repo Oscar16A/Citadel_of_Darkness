@@ -108,7 +108,7 @@ public class PlayerMovement2 : MonoBehaviour
             {
                 velocity = moveDir;
             }
-            else if(slideOff)
+            else if(slideOff && velocity.y < 0f)
             {
                 if(Physics.SphereCast(transform.position, groundDistance, -Vector3.up, out hit, Vector3.Distance(transform.position, groundCheck.position)))
                 {
@@ -127,11 +127,11 @@ public class PlayerMovement2 : MonoBehaviour
                 }
                 else
                 {
-                    float jumpForce = Mathf.Sqrt(jumpHeight * -2 * startGravity);
-                    if(Physics.SphereCast(transform.position, groundDistance, -Vector3.up, out hit, Vector3.Distance(transform.position, groundCheck.position)))
-                    {
-                        velocity = hit.normal * jumpForce;
-                    }
+                    // float jumpForce = Mathf.Sqrt(jumpHeight * -2 * startGravity);
+                    // if(Physics.SphereCast(transform.position, groundDistance, -Vector3.up, out hit, Vector3.Distance(transform.position, groundCheck.position)))
+                    // {
+                    //     velocity = hit.normal * jumpForce;
+                    // }
                 }
                 
             }
