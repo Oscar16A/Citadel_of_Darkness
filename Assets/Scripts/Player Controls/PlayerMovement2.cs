@@ -125,15 +125,14 @@ public class PlayerMovement2 : MonoBehaviour
                 {
                     velocity.y = Mathf.Sqrt(jumpHeight * -2 * startGravity);
                 }
-                else
-                {
-                    // float jumpForce = Mathf.Sqrt(jumpHeight * -2 * startGravity);
-                    // if(Physics.SphereCast(transform.position, groundDistance, -Vector3.up, out hit, Vector3.Distance(transform.position, groundCheck.position)))
-                    // {
-                    //     velocity = hit.normal * jumpForce;
-                    // }
-                }
-                
+                // else if(slideOff && velocity.y < 0f)
+                // {
+                //     float jumpForce = Mathf.Sqrt(jumpHeight * -2 * startGravity);
+                //     if(Physics.SphereCast(transform.position, groundDistance, -Vector3.up, out hit, Vector3.Distance(transform.position, groundCheck.position)))
+                //     {
+                //         velocity = hit.normal * jumpForce;
+                //     }
+                // } //won't work with current input (using jump)
             }
             
             //less floaty jump
