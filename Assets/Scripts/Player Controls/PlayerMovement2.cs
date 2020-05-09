@@ -7,61 +7,62 @@ public class PlayerMovement2 : MonoBehaviour
     CharacterController controller;
     public float speed = 6f;
     public float sprintSpeed = 9f;
-    public float crouchSpeed = 3f;
     public float jumpHeight = 3f;
     public float gravity = -9.81f;
     public float fallingGravityMultiplier = 2f;
     private float startGravity;
     public Vector3 velocity;
     RaycastHit hit;
-    public bool airControl;
     public Transform groundCheck;
-    public float groundDistance = 0.4f;
+    public float groundDistance = 0.5f;
     public LayerMask groundMask;
     [Header("Animation Queues")]
     public bool isGrounded;
-    public bool walking;
     public bool freeze = false;
     public bool freezeY = false;
-
+    public bool slideOff = true;
     //For checking to see if the footstep sounds are playing.
     private bool walkFootstepsPlaying = false;
     private bool runFootstepsPlaying = false;
     private bool landingPlayed = true; //True if the landing sound has played after jumping.
-
     void Start()
     {
         controller = GetComponent<CharacterController>();
         startGravity = gravity;
+        slideOff = true;
     }
     void Update()
     {
         if(!freeze)
         {
-            isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
-            Physics.SphereCast(transform.position, groundDistance, -Vector3.up, out hit, groundMask);
-            bool canWalk = Vector3.Angle(hit.normal,Vector3.up) <= controller.slopeLimit;
-
-            walking = false;
-            //Debug.Log(controller.velocity);
-            if(Vector3.Magnitude(controller.velocity) > 0 && isGrounded)
+            
+            if(Physics.SphereCast(transform.position, groundDistance, -Vector3.up, out hit, Vector3.Distance(transform.position, groundCheck.position),  groundMask) && 
+               Vector3.Angle(hit.normal,Vector3.up) < controller.slopeLimit)
             {
-                walking = true;
+                isGrounded = true;
+                Debug.DrawRay(hit.point, hit.normal, Color.blue, 1f);
+            }
+            else
+            {
+                isGrounded = false;
+                Debug.DrawRay(hit.point, hit.normal, Color.red, 1f);
             }
 
             if(isGrounded && velocity.y < 0)
             {
                 velocity.y = -2f;
             }
+
             //horizontal movement
             float x = Input.GetAxis("Horizontal");
             float z = Input.GetAxis("Vertical");
-            Vector3 move = transform.right * x + transform.forward * z;
-            move = Vector3.ClampMagnitude(move, 1f);
+            Vector3 moveDir = transform.right * x + transform.forward * z;
+            moveDir = Vector3.ClampMagnitude(moveDir, 1f);
+
             //horizontal speed
-            if(Input.GetButton("Sprint")) //sprint
+            if(!Input.GetButton("Sprint")) //sprint
             {
-                move *= sprintSpeed;
+                moveDir *= sprintSpeed;
 
                 //AUDIO
                 //Trigger running sounds, stop walking sounds if they are playing
@@ -80,13 +81,9 @@ public class PlayerMovement2 : MonoBehaviour
                     runFootstepsPlaying = false;
                 }      
             }
-            else if(Input.GetButton("Crouch")) //crouch
-            {
-                move *= crouchSpeed;
-            }
             else //walk
             {
-                move *= speed;
+                moveDir *= speed;
 
                 //AUDIO
                 //Trigger walking sounds, stop running sounds if they are playing
@@ -105,16 +102,38 @@ public class PlayerMovement2 : MonoBehaviour
                     walkFootstepsPlaying = false;
                 }
             }
-            if(isGrounded || airControl)
+
+
+            if(isGrounded)
             {
-                velocity.x = move.x;
-                velocity.z = move.z;
+                velocity = moveDir;
+            }
+            else if(slideOff)
+            {
+                if(Physics.SphereCast(transform.position, groundDistance, -Vector3.up, out hit, Vector3.Distance(transform.position, groundCheck.position)))
+                {
+                    Vector3 slideDir = hit.normal * 2f * Mathf.Cos(Mathf.Deg2Rad * Vector3.Angle(hit.normal, Vector3.up));
+
+                    velocity = slideDir + (-Vector3.up * 2f);
+                }
             }
 
             //jump
-            if(Input.GetButtonDown("Jump") && isGrounded && canWalk)
+            if(Input.GetButtonDown("Jump"))
             {
-                velocity.y = Mathf.Sqrt(jumpHeight * -2 * startGravity);
+                if(isGrounded)
+                {
+                    velocity.y = Mathf.Sqrt(jumpHeight * -2 * startGravity);
+                }
+                else
+                {
+                    float jumpForce = Mathf.Sqrt(jumpHeight * -2 * startGravity);
+                    if(Physics.SphereCast(transform.position, groundDistance, -Vector3.up, out hit, Vector3.Distance(transform.position, groundCheck.position)))
+                    {
+                        velocity = hit.normal * jumpForce;
+                    }
+                }
+                
             }
             
             //less floaty jump
@@ -129,6 +148,7 @@ public class PlayerMovement2 : MonoBehaviour
             
             //apply gravity
             velocity.y += gravity * Time.deltaTime;
+
             //don't apply gravity if freezeY true
             if(freezeY)
             {
