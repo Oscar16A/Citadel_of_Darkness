@@ -6,11 +6,11 @@ public class ClimbControl2 : MonoBehaviour
 {
     private PlayerMovement2 movement;
     private CharacterController controller;
+    private WallRun wallRun;
     private bool validClimb;
     private LayerMask myMask;
     public float animLength = 0.34f; //in seconds
     public Animator anim;
-    public float angleTolerance = 0f; // how far the ledge can be tillted and still be climbed
     private bool freeze;
     Vector3 fS;
     Vector3 uS;
@@ -18,6 +18,7 @@ public class ClimbControl2 : MonoBehaviour
     {
         movement = GetComponent<PlayerMovement2>();
         controller = GetComponent<CharacterController>();
+        wallRun = GetComponent<WallRun>();
         myMask = movement.groundMask;
     }
     private void Update()
@@ -48,7 +49,8 @@ public class ClimbControl2 : MonoBehaviour
             
             validClimb = CheckClimb(ref hit) && SpaceCheck();
             // Debug.Log(hit.normal);
-            if((Input.GetAxisRaw("Vertical") > 0) && validClimb)
+            // if(Input.GetAxisRaw("Vertical") > 0f && validClimb)
+            if(Input.GetButton("Jump") && validClimb)
             {
                 if(!freeze)
                 {
@@ -61,16 +63,18 @@ public class ClimbControl2 : MonoBehaviour
     private bool SpaceCheck()
     {
         RaycastHit throwAway;
-        return (!(Physics.SphereCast(transform.position, 0.5f, Vector3.up, out throwAway, 2.5f, myMask)) && !(Physics.SphereCast(transform.position + Vector3.up * 2.5f, 0.5f, transform.forward, out throwAway, 1f, myMask)));
+        return (!(Physics.SphereCast(transform.position, 0.5f, Vector3.up, out throwAway, 2.5f, myMask)) && //space above
+                !(Physics.SphereCast(transform.position + Vector3.up * 2.5f, 0.5f, transform.forward, out throwAway, 1f, myMask)) ); //space above and forward
     }
 
     private bool CheckClimb(ref RaycastHit hit)
     {
-        if(Physics.Raycast(transform.position + transform.forward + new Vector3(0f,2f,0f), -transform.up, out hit, 2.5f, myMask))
+        if(Physics.SphereCast(transform.position + transform.forward + new Vector3(0f,2.5f,0f), 0.5f, -Vector3.up, out hit, 2f, myMask))
         {
-            if(Vector3.Angle(hit.normal, Vector3.up) <= angleTolerance)
+            if(Vector3.Angle(hit.normal, Vector3.up) <= controller.slopeLimit)
             {
-                if(!Physics.Raycast(transform.position + transform.forward + new Vector3(0f,2f,0f), transform.up, 1.5f, myMask))
+                RaycastHit throwAway;
+                if(!Physics.SphereCast(hit.point, 0.6f, Vector3.up, out throwAway, 2f, myMask))
                 {
                     return true;
                 }
@@ -83,18 +87,25 @@ public class ClimbControl2 : MonoBehaviour
     private void ClimbLedge(ref RaycastHit hit)
     {
         movement.freeze = true;
+        wallRun.freeze = true;
         freeze = true;
         controller.Move(transform.forward + new Vector3(0f,hit.point.y-transform.position.y + 1f,0f));
-        anim.SetTrigger("Climb");
+        ClimbAnim();
         UnfreezeDelay(animLength);
+    }
+
+    void ClimbAnim()
+    {
+        anim.SetTrigger("Climb");
+        anim.ResetTrigger("No Lean");
+        anim.ResetTrigger("Left Lean");
+        anim.ResetTrigger("Right Lean");
     }
 
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.green;
         Gizmos.DrawRay(transform.position + transform.forward + new Vector3(0f,2f,0f), -transform.up*2.5f);
-        Gizmos.color = Color.red;
-        Gizmos.DrawRay(transform.position + transform.forward + new Vector3(0f,2f,0f), transform.up*1.5f);
         // Gizmos.color = Color.blue;
         // Gizmos.DrawWireSphere(uS, 0.5f);//up
         // Gizmos.DrawWireSphere(fS, 0.5f);//forward
@@ -111,6 +122,7 @@ public class ClimbControl2 : MonoBehaviour
         yield return new WaitForSeconds(time);
         movement.velocity = new Vector3(0f,-2f,0f);
         movement.freeze = false;
+        wallRun.freeze = false;
         freeze = false;
     }
 }
