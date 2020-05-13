@@ -39,8 +39,8 @@ public class WallRun : MonoBehaviour
         if(!freeze)
         {
             OffWallCheck();
-            OnWallCheck2();
-            if((Input.GetButtonDown("Jump") && validWall) || (keepRunning && validWall))
+            //OnWallCheck2();
+            if((Input.GetButton("Jump") && validWall && IsFalling()) || (keepRunning && validWall))
             {
 
                 keepRunning = true;
@@ -59,6 +59,11 @@ public class WallRun : MonoBehaviour
     {
         myHit = hit;
         OnWallCheck();
+    }
+
+    private bool IsFalling()
+    {
+        return controller.velocity.y <= 0f;
     }
     private void UpdateAnim()
     {
@@ -160,7 +165,7 @@ public class WallRun : MonoBehaviour
             movement.slideOff = true;
         }
 
-        if(Input.GetButtonDown("Jump") && jumpBuffer)
+        if(Input.GetButtonUp("Jump") && jumpBuffer)
         {
             HopOff();
             Return2Idle();

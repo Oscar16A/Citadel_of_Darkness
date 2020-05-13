@@ -50,7 +50,7 @@ public class ClimbControl2 : MonoBehaviour
             validClimb = CheckClimb(ref hit) && SpaceCheck();
             // Debug.Log(hit.normal);
             // if(Input.GetAxisRaw("Vertical") > 0f && validClimb)
-            if(Input.GetButton("Jump") && validClimb)
+            if((Input.GetAxisRaw("Vertical") > 0f) && validClimb)
             {
                 if(!freeze)
                 {
