@@ -69,31 +69,6 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Play_Footsteps_Wall_Run" ID="{8F4EDF69-402A-4517-83C6-644CE950D897}">
-					<ChildrenList>
-						<Action Name="" ID="{B5CC5884-75BF-4AC1-8AEC-D6699DB2AE91}" ShortID="723724659">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Footsteps_Wall_Run" ID="{B0BD6B01-EDD2-4DB5-BF27-A508E6B3880F}" WorkUnitID="{471DBAFB-3C9D-4167-8D59-F2033C0E6C08}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Stop_Footsteps_Wall_Run" ID="{61822D26-9AE4-4870-AFF8-D824537E084D}">
-					<ChildrenList>
-						<Action Name="" ID="{0E393A78-CF00-4BCE-BA6F-CB5FA764F361}" ShortID="217754380">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Footsteps_Wall_Run" ID="{B0BD6B01-EDD2-4DB5-BF27-A508E6B3880F}" WorkUnitID="{471DBAFB-3C9D-4167-8D59-F2033C0E6C08}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
 				<Event Name="Play_Jump" ID="{6194146E-DACC-4E94-868C-4416FCB78F4E}">
 					<ChildrenList>
 						<Action Name="" ID="{2D6644F7-DDBC-419C-A8A1-54CAE1744E7C}" ShortID="746003748">
@@ -122,6 +97,31 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Jump_Landing_Cloth" ID="{7D426F75-37A0-49CE-B6B8-D2ED2C4F1DC7}" WorkUnitID="{471DBAFB-3C9D-4167-8D59-F2033C0E6C08}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Footsteps_Wall_Running" ID="{0159B08B-F158-4E21-AD6F-3B680968E2B9}">
+					<ChildrenList>
+						<Action Name="" ID="{8022C08D-0A70-464B-AAC6-F0AC6AFCDDC2}" ShortID="897506200">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Footsteps_Wall_Running" ID="{1DDFFC1D-2E31-4CB6-B2A2-7C20D9B418F1}" WorkUnitID="{471DBAFB-3C9D-4167-8D59-F2033C0E6C08}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_Footsteps_Wall_Running" ID="{91720AE7-3E1F-41A8-97F7-0D1944988A23}">
+					<ChildrenList>
+						<Action Name="" ID="{82860581-83B8-4646-8686-5DAF3F0DF971}" ShortID="433426619">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Footsteps_Wall_Running" ID="{1DDFFC1D-2E31-4CB6-B2A2-7C20D9B418F1}" WorkUnitID="{471DBAFB-3C9D-4167-8D59-F2033C0E6C08}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

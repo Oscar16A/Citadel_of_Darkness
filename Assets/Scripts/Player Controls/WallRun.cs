@@ -15,38 +15,76 @@ public class WallRun : MonoBehaviour
     private CharacterController controller;
     private LayerMask myMask;
     private bool validWall;
+    private bool keepRunning;
+    private bool jumpBuffer;
     private float startGravity;
     private float timeLeft;
+    private float runTimer;
     private ControllerColliderHit myHit;
+    public Animator Anim;
+    public bool freeze = false;
     private void Start()
     {
         movement = GetComponent<PlayerMovement2>();
         controller = GetComponent<CharacterController>();
         myMask = movement.groundMask;
         startGravity = movement.gravity;
-        stance = Lean.None;
+        freeze = false;
+        Return2Idle();
     }
 
     private void Update()
     {
-        //Debug.Log(stance);
         //check if still on wall
-        OffWallCheck();
+        if(!freeze)
+        {
+            OffWallCheck();
+            //OnWallCheck2();
+            if((Input.GetButton("Jump") && validWall && IsFalling()) || (keepRunning && validWall))
+            {
 
-        if((Input.GetAxisRaw("Vertical") > 0) && validWall)
-        {
-            Run();
-        }
-        else
-        {
-            movement.freezeY = false;
+                keepRunning = true;
+                Run();
+            }
+            else
+            {
+                movement.freezeY = false;
+                movement.slideOff = true;
+                Return2Idle();       
+            }
+            UpdateAnim();
         }
     }
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        //Debug.Log(hit.normal);
         myHit = hit;
         OnWallCheck();
+    }
+
+    private bool IsFalling()
+    {
+        return controller.velocity.y <= 0f;
+    }
+    private void UpdateAnim()
+    {
+        switch (stance)
+        {
+            case Lean.None:
+                Anim.SetTrigger("No Lean");
+                Anim.ResetTrigger("Right Lean");
+                Anim.ResetTrigger("Left Lean");
+                break;
+            case Lean.Right:
+                Anim.ResetTrigger("No Lean");
+                Anim.SetTrigger("Right Lean");
+                Anim.ResetTrigger("Left Lean");
+                break;
+            case Lean.Left:
+                Anim.ResetTrigger("No Lean");
+                Anim.ResetTrigger("Right Lean");
+                Anim.SetTrigger("Left Lean");
+                break;
+        }
     }
     private void OffWallCheck()
     {
@@ -54,46 +92,85 @@ public class WallRun : MonoBehaviour
         if(timeLeft <= 0f)
         {
             validWall = false;
-            stance = Lean.None;
+            Return2Idle();
         }
     }
     private void OnWallCheck()
     {
-        if(!movement.isGrounded && (myHit.normal.y < 0.1f && myHit.normal.y > -0.1f) && Falling())
+        if(!movement.isGrounded && 
+            (Vector3.Angle(myHit.normal, Vector3.up) > controller.slopeLimit) && 
+            (Vector3.Angle(myHit.normal, Vector3.up) < 112.5f) )
+            // && (Vector3.Angle(Vector3.Normalize(new Vector3(myHit.normal.x, 0f, myHit.normal.z)), transform.forward) < 157.5f) )
         {
-            Debug.DrawRay(myHit.point, myHit.normal, Color.red, 1.25f);
+            Debug.DrawRay(myHit.point, myHit.normal, Color.green, 1.25f);
             timeLeft = 0.1f;
             validWall = true;
         }
     }
-    private bool Falling()
+
+    private void OnWallCheck2()
     {
-        return controller.velocity.y <= 0f;
+        if(Physics.CheckSphere(transform.position, 0.75f, myMask) && !movement.isGrounded)
+        {
+            validWall = true;
+        }
     }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireSphere(transform.position, 0.75f);
+    }
+
     private void Run()
     {
+        runTimer -= Time.deltaTime;
         movement.freezeY = true;
-
-        if(Vector3.SignedAngle(myHit.normal, transform.forward, Vector3.up) > 0f)//wall right
+        movement.slideOff = false;
+        // Debug.Log(Vector3.SignedAngle(myHit.normal, transform.forward, Vector3.up));
+        if((Vector3.SignedAngle(myHit.normal, transform.forward, Vector3.up) > 22.5f) && (Input.GetAxisRaw("Vertical") > 0f) && (runTimer > 0f))//wall right
         {
             Vector3 direction = Vector3.Normalize(new Vector3(myHit.normal.x, 0f, myHit.normal.z));
             direction = Quaternion.Euler(0f,100f,0f) * direction;
+            float yVelocity = movement.velocity.y;
             movement.velocity = direction * movement.speed;
+            movement.velocity.y = yVelocity * (runTimer/2f);
             stance = Lean.Left;
         }
-        else//wall left
+        else if ((Vector3.SignedAngle(myHit.normal, transform.forward, Vector3.up) < -22.5f) && (Input.GetAxisRaw("Vertical") > 0f) && (runTimer > 0f))//wall left
         {
             Vector3 direction = Vector3.Normalize(new Vector3(myHit.normal.x, 0f, myHit.normal.z));
             direction = Quaternion.Euler(0f,-100f,0f) * direction;
+            float yVelocity = movement.velocity.y;
             movement.velocity = direction * movement.speed;
+            movement.velocity.y = yVelocity * (runTimer/2f);
             stance = Lean.Right;
         }
-
-        if(Input.GetButtonDown("Jump"))
+        else if(Input.GetAxisRaw("Vertical") < 0f || runTimer < 0f)
         {
-            HopOff();
+            Return2Idle();
+        }
+        else
+        {
+            Vector3 direction = Vector3.Normalize(new Vector3(myHit.normal.x, 0f, myHit.normal.z));
+            float yVelocity = movement.velocity.y;
+            movement.velocity = -direction;
+            movement.velocity.y = yVelocity * (runTimer/2f);
             stance = Lean.None;
         }
+
+        if(runTimer < 1.5f)
+        {
+            movement.freezeY = false;
+            movement.slideOff = true;
+        }
+
+        if(Input.GetButtonUp("Jump") && jumpBuffer)
+        {
+            HopOff();
+            Return2Idle();
+        }
+        jumpBuffer = true;
     }    
     private void HopOff()
     {
@@ -105,6 +182,15 @@ public class WallRun : MonoBehaviour
 
         //clean up
         movement.freezeY = false;
+        movement.slideOff = true;
         validWall = false;
+    }
+
+    private void Return2Idle()
+    {
+        keepRunning = false;
+        stance = Lean.None;
+        jumpBuffer = false;
+        runTimer = 2.5f;
     }
 }

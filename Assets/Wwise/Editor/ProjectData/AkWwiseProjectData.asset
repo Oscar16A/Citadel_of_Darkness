@@ -40,7 +40,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 0e0e82bd22d2f44bbb9e0cbc5aaa7070
     GuidInternal: 
-    m_lastTime: -8586129225809559290
+    m_lastTime: -8586129206045059712
     List:
     - name: Main
       guid: de2f5fa84f1a1b4f9c720a7eceb62031
@@ -56,7 +56,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 258f7bbf3c27b64f8832182924e218f1
     GuidInternal: 
-    m_lastTime: -8586129225809658645
+    m_lastTime: -8586129206044960722
     List:
     - name: Play_Footsteps_Running
       guid: 3a58120f317a0b42ab9d513dc4d16b07
@@ -82,15 +82,15 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
-    - name: Play_Footsteps_Wall_Run
-      guid: 69df4e8f2a40174583c6644ce950d897
-      id: 3729537260
+    - name: Play_Footsteps_Wall_Running
+      guid: 8bb0590158f1214ead6f3b680968e2b9
+      id: 3106752070
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: Play_Footsteps_Wall_Run
+      - ElementName: Play_Footsteps_Wall_Running
         ObjectType: 3
-      Path: Default Work Unit\Play_Footsteps_Wall_Run
+      Path: Default Work Unit\Play_Footsteps_Wall_Running
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -166,18 +166,18 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
-    - name: Stop_Footsteps_Wall_Run
-      guid: 262d8261e49a7048aff8d824537e084d
-      id: 1786762098
+    - name: Stop_Footsteps_Wall_Running
+      guid: e70a72911f3ea84197f70d1944988a23
+      id: 1174869440
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: Stop_Footsteps_Wall_Run
+      - ElementName: Stop_Footsteps_Wall_Running
         ObjectType: 3
-      Path: Default Work Unit\Stop_Footsteps_Wall_Run
+      Path: Default Work Unit\Stop_Footsteps_Wall_Running
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPath: Default Work Unit
@@ -208,7 +208,5 @@ MonoBehaviour:
     List: []
   ExpandedItems:
   - /Citadel_of_Darkness_WwiseProject
-  - /Citadel_of_Darkness_WwiseProject/SoundBanks
-  - /Citadel_of_Darkness_WwiseProject/SoundBanks/Default Work Unit
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
