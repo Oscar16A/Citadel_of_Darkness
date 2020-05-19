@@ -148,7 +148,9 @@ public class WallRun : MonoBehaviour
         }
         else if(Input.GetAxisRaw("Vertical") < 0f || runTimer < 0f)
         {
-            Return2Idle();
+            keepRunning = false;
+            stance = Lean.None;
+            jumpBuffer = false;
         }
         else
         {
