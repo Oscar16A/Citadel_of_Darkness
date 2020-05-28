@@ -30,7 +30,7 @@
 						<Action Name="" ID="{A826D502-9809-4B1D-A4B0-0650DF7EFB7B}" ShortID="628643464">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="2"/>
-								<Property Name="FadeTime" Type="Real64" Value="2.5"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -59,7 +59,7 @@
 						<Action Name="" ID="{54414386-E0C3-414C-AA21-461E78B5759E}" ShortID="904530272">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="2"/>
-								<Property Name="FadeTime" Type="Real64" Value="2.5"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -118,10 +118,40 @@
 						<Action Name="" ID="{82860581-83B8-4646-8686-5DAF3F0DF971}" ShortID="433426619">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Footsteps_Wall_Running" ID="{1DDFFC1D-2E31-4CB6-B2A2-7C20D9B418F1}" WorkUnitID="{471DBAFB-3C9D-4167-8D59-F2033C0E6C08}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Cave_01" ID="{6CF679CE-1471-40C8-9796-C699064A0144}">
+					<ChildrenList>
+						<Action Name="" ID="{83FADB53-E5E4-4FFA-8E3C-FFFB274587A2}" ShortID="702264222">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Cave_01" ID="{CA2DDED9-09E3-45D5-8593-F43EBAFBCBA2}" WorkUnitID="{471DBAFB-3C9D-4167-8D59-F2033C0E6C08}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_Cave_01" ID="{5E25F4FE-797F-4B13-BDFA-8F162A692B50}">
+					<ChildrenList>
+						<Action Name="" ID="{7A52F9CD-749B-4685-B2A0-D4D0A2A6F21E}" ShortID="1067074550">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Cave_01" ID="{CA2DDED9-09E3-45D5-8593-F43EBAFBCBA2}" WorkUnitID="{471DBAFB-3C9D-4167-8D59-F2033C0E6C08}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

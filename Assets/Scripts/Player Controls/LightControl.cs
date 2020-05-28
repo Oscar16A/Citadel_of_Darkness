@@ -8,7 +8,7 @@ public class LightControl : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown("f"))
+        if (Input.GetButtonDown("FlashLight"))
         {
             flashLight.SetActive(!flashLight.activeSelf);
         }

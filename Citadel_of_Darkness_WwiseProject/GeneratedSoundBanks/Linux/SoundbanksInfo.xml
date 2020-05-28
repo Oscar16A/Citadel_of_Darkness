@@ -21,6 +21,14 @@
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<IncludedEvents>
+				<Event Id="2096207869" Name="Play_Cave_01" ObjectPath="\Events\Default Work Unit\Play_Cave_01" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="361147981" Language="SFX">
+							<ShortName>Cave Entrance.wav</ShortName>
+							<Path>SFX\Cave Entrance_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="203814959" Name="Play_Footsteps_Running" ObjectPath="\Events\Default Work Unit\Play_Footsteps_Running" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="29352538" Language="SFX">
@@ -105,6 +113,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="3963272187" Name="Stop_Cave_01" ObjectPath="\Events\Default Work Unit\Stop_Cave_01" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="3603051261" Name="Stop_Footsteps_Running" ObjectPath="\Events\Default Work Unit\Stop_Footsteps_Running" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="2120730845" Name="Stop_Footsteps_Walking" ObjectPath="\Events\Default Work Unit\Stop_Footsteps_Walking" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="1174869440" Name="Stop_Footsteps_Wall_Running" ObjectPath="\Events\Default Work Unit\Stop_Footsteps_Wall_Running" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>

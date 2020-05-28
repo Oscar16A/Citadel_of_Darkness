@@ -11,4 +11,6 @@ public static class StatsData
 	public static float volumeLevel = 10f;
 
 	public static bool loadingFromPauseMenu = false;
+
+	public static bool hasKey = false;
 }

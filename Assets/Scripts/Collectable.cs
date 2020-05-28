@@ -19,7 +19,7 @@ public class Collectable : MonoBehaviour
 		Instantiate(effect, transform.position, transform.rotation);
 
 		StatsData.collectables++;
-
+		//StatsData.hasKey = true; 
 		Destroy(gameObject);
 	}
 }
