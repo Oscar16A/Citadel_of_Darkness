@@ -28,6 +28,7 @@ public class PlayerMovement2 : MonoBehaviour
     private bool landTimeOver = true;
     private bool runTimeOver = true;
     private bool sprintTimeOver = true;
+    private float AirTime = 0.0f;
     void Start()
     {
         controller = GetComponent<CharacterController>();
@@ -176,14 +177,16 @@ public class PlayerMovement2 : MonoBehaviour
             sprintFootstepsPlaying = false;
 
             landingPlayed = false;
+            AirTime += Time.deltaTime;
         }
-        else if (!landingPlayed && landTimeOver)
+        else if (!landingPlayed && landTimeOver && AirTime > 0.43f)
         {
             AkSoundEngine.PostEvent("Play_Jump_Landing", gameObject);
             AkSoundEngine.PostEvent("Play_Jump_Landing_Cloth", gameObject);
             landingPlayed = true;
             landTimeOver = false;
             StartCoroutine(LandingTimer());
+            AirTime = 0.0f;
         }                
     }
     private void OnDrawGizmos()
