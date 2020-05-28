@@ -7,6 +7,6 @@ public class levelChange : MonoBehaviour
 {
     private void OnTriggerEnter(Collider collision)
     {
-            SceneManager.LoadScene("Dreary Entrance");
+            SceneManager.LoadScene("MainMenu");
     }
 }
