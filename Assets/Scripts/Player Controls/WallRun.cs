@@ -23,6 +23,8 @@ public class WallRun : MonoBehaviour
     private ControllerColliderHit myHit;
     public Animator Anim;
     public bool freeze = false;
+    //For checking to see if the footstep sounds are playing.
+    private bool wallRunPlaying = false;
     private void Start()
     {
         movement = GetComponent<PlayerMovement2>();
@@ -42,15 +44,28 @@ public class WallRun : MonoBehaviour
             //OnWallCheck2();
             if((Input.GetButton("Jump") && validWall && IsFalling()) || (keepRunning && validWall))
             {
-
                 keepRunning = true;
                 Run();
+                //AUDIO
+                //Play Wall Run sounds if they are not currently playing.
+                if (!wallRunPlaying)
+                {
+                    AkSoundEngine.PostEvent("Play_Footsteps_Wall_Running", gameObject);
+                    wallRunPlaying = true;
+                }        
             }
             else
             {
                 movement.freezeY = false;
                 movement.slideOff = true;
-                Return2Idle();       
+                Return2Idle();   
+                //AUDIO
+                //Stop wall running sounds if they are currently playing.
+                if (wallRunPlaying)
+                {
+                    AkSoundEngine.PostEvent("Stop_Footsteps_Wall_Running", gameObject);
+                    wallRunPlaying = false; 
+                }         
             }
             UpdateAnim();
         }

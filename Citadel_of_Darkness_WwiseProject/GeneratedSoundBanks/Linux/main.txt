@@ -2,11 +2,13 @@ Event	ID	Name			Wwise Object Path	Notes
 	203814959	Play_Footsteps_Running			\Default Work Unit\Play_Footsteps_Running	
 	1174869440	Stop_Footsteps_Wall_Running			\Default Work Unit\Stop_Footsteps_Wall_Running	
 	1871925003	Play_Footsteps_Walking			\Default Work Unit\Play_Footsteps_Walking	
+	2096207869	Play_Cave_01			\Default Work Unit\Play_Cave_01	
 	2120730845	Stop_Footsteps_Walking			\Default Work Unit\Stop_Footsteps_Walking	
 	2384510883	Play_Jump_Landing_Cloth			\Default Work Unit\Play_Jump_Landing_Cloth	
 	3106752070	Play_Footsteps_Wall_Running			\Default Work Unit\Play_Footsteps_Wall_Running	
 	3603051261	Stop_Footsteps_Running			\Default Work Unit\Stop_Footsteps_Running	
 	3808321334	Play_Jump_Landing			\Default Work Unit\Play_Jump_Landing	
+	3963272187	Stop_Cave_01			\Default Work Unit\Stop_Cave_01	
 	4213462902	Play_Turtle_Squeal			\Default Work Unit\Play_Turtle_Squeal	
 
 Effect plug-ins	ID	Name	Type				Notes
@@ -18,6 +20,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	229655329	Footsteps_Running_02	D:\GitHub\Citadel_of_Darkness\Citadel_of_Darkness_WwiseProject\.cache\Linux\SFX\footstep_sprinting_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps_Wall_Running\Footsteps_Running_02		40836
 	284850333	Jump_Landing_03	D:\GitHub\Citadel_of_Darkness\Citadel_of_Darkness_WwiseProject\.cache\Linux\SFX\jump_landing_3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Jump_Landing\Jump_Landing_03		34900
 	318515670	Turtle Squeal	D:\GitHub\Citadel_of_Darkness\Citadel_of_Darkness_WwiseProject\.cache\Linux\SFX\Turtle Squeal_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Turtle Squeal		1057712
+	361147981	Cave_01	D:\GitHub\Citadel_of_Darkness\Citadel_of_Darkness_WwiseProject\.cache\Linux\SFX\Cave Entrance_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cave_01		20878156
 	383476147	Footsteps_Running_03	D:\GitHub\Citadel_of_Darkness\Citadel_of_Darkness_WwiseProject\.cache\Linux\SFX\footstep_sprinting_3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps_Wall_Running\Footsteps_Running_03		40836
 	674168618	Footsteps_Running_01	D:\GitHub\Citadel_of_Darkness\Citadel_of_Darkness_WwiseProject\.cache\Linux\SFX\footstep_sprinting_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps_Wall_Running\Footsteps_Running_01		40836
 	757538133	Jump_Landing_Cloth	D:\GitHub\Citadel_of_Darkness\Citadel_of_Darkness_WwiseProject\.cache\Linux\SFX\jump_landing_cloth_3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Jump_Landing_Cloth		75608

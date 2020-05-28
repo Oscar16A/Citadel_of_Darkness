@@ -13,12 +13,14 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID PLAY_CAVE_01 = 2096207869U;
         static const AkUniqueID PLAY_FOOTSTEPS_RUNNING = 203814959U;
         static const AkUniqueID PLAY_FOOTSTEPS_WALKING = 1871925003U;
         static const AkUniqueID PLAY_FOOTSTEPS_WALL_RUNNING = 3106752070U;
         static const AkUniqueID PLAY_JUMP_LANDING = 3808321334U;
         static const AkUniqueID PLAY_JUMP_LANDING_CLOTH = 2384510883U;
         static const AkUniqueID PLAY_TURTLE_SQUEAL = 4213462902U;
+        static const AkUniqueID STOP_CAVE_01 = 3963272187U;
         static const AkUniqueID STOP_FOOTSTEPS_RUNNING = 3603051261U;
         static const AkUniqueID STOP_FOOTSTEPS_WALKING = 2120730845U;
         static const AkUniqueID STOP_FOOTSTEPS_WALL_RUNNING = 1174869440U;

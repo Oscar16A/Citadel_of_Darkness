@@ -40,7 +40,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 0e0e82bd22d2f44bbb9e0cbc5aaa7070
     GuidInternal: 
-    m_lastTime: -8586129206045059712
+    m_lastTime: -8586109763811377373
     List:
     - name: Main
       guid: de2f5fa84f1a1b4f9c720a7eceb62031
@@ -56,8 +56,20 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 258f7bbf3c27b64f8832182924e218f1
     GuidInternal: 
-    m_lastTime: -8586129206044960722
+    m_lastTime: -8586109763226970577
     List:
+    - name: Play_Cave_01
+      guid: ce79f66c7114c8409796c699064a0144
+      id: 2096207869
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Cave_01
+        ObjectType: 3
+      Path: Default Work Unit\Play_Cave_01
+      maxAttenuation: 0
+      maxDuration: 118.35617
+      minDuration: 118.35617
     - name: Play_Footsteps_Running
       guid: 3a58120f317a0b42ab9d513dc4d16b07
       id: 203814959
@@ -142,6 +154,18 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 5.995374
       minDuration: 5.995374
+    - name: Stop_Cave_01
+      guid: fef4255e7f79134bbdfa8f162a692b50
+      id: 3963272187
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Stop_Cave_01
+        ObjectType: 3
+      Path: Default Work Unit\Stop_Cave_01
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_Footsteps_Running
       guid: 8c345c1ad72d4f4db9865e46562a25d7
       id: 3603051261
@@ -208,5 +232,7 @@ MonoBehaviour:
     List: []
   ExpandedItems:
   - /Citadel_of_Darkness_WwiseProject
+  - /Citadel_of_Darkness_WwiseProject/Events
+  - /Citadel_of_Darkness_WwiseProject/Events/Default Work Unit
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
