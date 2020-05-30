@@ -11352,10 +11352,15 @@ PrefabInstance:
       propertyPath: airControl
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5662845069999184349, guid: 5ce3c53bf7a429a4a8f03d2c15705c7d,
+    - target: {fileID: 5662845069999184348, guid: 5ce3c53bf7a429a4a8f03d2c15705c7d,
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5662845069999184349, guid: 5ce3c53bf7a429a4a8f03d2c15705c7d,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5662845069999184351, guid: 5ce3c53bf7a429a4a8f03d2c15705c7d,
         type: 3}
@@ -11411,6 +11416,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6425302675004613544, guid: 5ce3c53bf7a429a4a8f03d2c15705c7d,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ce3c53bf7a429a4a8f03d2c15705c7d, type: 3}
