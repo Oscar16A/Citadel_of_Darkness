@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1178069942089186100}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BigCrystal_RB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 1178069942092577556}
   - component: {fileID: 1178069942091610580}
   - component: {fileID: 5483423621965541617}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Group17654
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -134,7 +134,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7879468821815952818}
   - component: {fileID: 4313416492328299863}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}

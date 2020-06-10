@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8075289582836275283}
   - component: {fileID: 6456355744067381670}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81,7 +81,7 @@ GameObject:
   - component: {fileID: 6673049383746289693}
   - component: {fileID: 6673049383745290973}
   - component: {fileID: 7089303582572664076}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Group44309
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -170,7 +170,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6673049383747059775}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: smallcrystal01_b
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 793115365779485749}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RockWall00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 793115365776618519}
   - component: {fileID: 793115365777716951}
   - component: {fileID: 8508922411245851296}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: g_Group3408_Group3408
   m_TagString: Untagged
   m_Icon: {fileID: 0}
