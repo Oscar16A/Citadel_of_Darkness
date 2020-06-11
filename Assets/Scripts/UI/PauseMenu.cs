@@ -81,6 +81,9 @@ public class PauseMenu : MonoBehaviour
 		mouseSlider.value = 3.2f;
 		volumeSlider.value = 70;
 
+		//AUDIO
+		//Sets Master Volume level to volumeSlider.value 
+		AkSoundEngine.SetRTPCValue("Master_Volume", volumeSlider.value);
 	}
 	public void MouseSensitivity(float input)
 	{
@@ -93,6 +96,10 @@ public class PauseMenu : MonoBehaviour
 	{
 		volumeInput.text = input.ToString();
 		StatsData.volumeLevel = input;
+
+		//AUDIO
+		//Sets Master Volume level to input value
+		AkSoundEngine.SetRTPCValue("Master_Volume", input);
 
 	}
 	IEnumerator MenuLoading()

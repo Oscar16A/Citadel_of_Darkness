@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 35ca9a4279d0cc4db9a5258eb3500152
     GuidInternal: 
-    m_lastTime: -8586158679602745209
+    m_lastTime: -8586097329464630313
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -40,7 +40,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 0e0e82bd22d2f44bbb9e0cbc5aaa7070
     GuidInternal: 
-    m_lastTime: -8586109763811377373
+    m_lastTime: -8586097348117945490
     List:
     - name: Main
       guid: de2f5fa84f1a1b4f9c720a7eceb62031
@@ -56,7 +56,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 258f7bbf3c27b64f8832182924e218f1
     GuidInternal: 
-    m_lastTime: -8586109763226970577
+    m_lastTime: -8586097268016861381
     List:
     - name: Play_Cave_01
       guid: ce79f66c7114c8409796c699064a0144
@@ -68,8 +68,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Play_Cave_01
       maxAttenuation: 0
-      maxDuration: 118.35617
-      minDuration: 118.35617
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Footsteps_Running
       guid: 3a58120f317a0b42ab9d513dc4d16b07
       id: 203814959
@@ -154,6 +154,30 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 5.995374
       minDuration: 5.995374
+    - name: Set_State_Game
+      guid: 17e29f568af2e646b9f15974e4246e15
+      id: 4207344442
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Set_State_Game
+        ObjectType: 3
+      Path: Default Work Unit\Set_State_Game
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Set_State_Menu
+      guid: ed3e10ab5db05741854d906183680a2c
+      id: 2302270969
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Set_State_Menu
+        ObjectType: 3
+      Path: Default Work Unit\Set_State_Menu
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_Cave_01
       guid: fef4255e7f79134bbdfa8f162a692b50
       id: 3963272187
@@ -207,15 +231,55 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: c86b5212828b9441aaa7e297c6953505
     GuidInternal: 
-    m_lastTime: -8586158679603104347
-    List: []
+    m_lastTime: -8586097329464351065
+    List:
+    - name: Master_Volume
+      guid: 44be768589610a4283824fb35b7371f2
+      id: 4179668880
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Master_Volume
+        ObjectType: 13
+      Path: Default Work Unit\Master_Volume
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPath: Default Work Unit
     guid: 056f537d9f13ae48b629a2ac5fe0652a
     GuidInternal: 
-    m_lastTime: -8586158679603403533
-    List: []
+    m_lastTime: -8586097348734409389
+    List:
+    - name: Game_States
+      guid: 51e747fb4ab11e47845ec1afbc35c12c
+      id: 2721494480
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Game_States
+        ObjectType: 9
+      Path: Default Work Unit\Game_States
+      values:
+      - name: Game
+        guid: 31941c32f637f34c9c316daaf0732c92
+        id: 702482391
+        PathAndIcons:
+        - ElementName: Game
+          ObjectType: 8
+      - name: Menu
+        guid: f97d3ab3d8d4fe459ce58d7718575400
+        id: 2607556080
+        PathAndIcons:
+        - ElementName: Menu
+          ObjectType: 8
+      - name: None
+        guid: d3a8c298a7d312449a42868ef668c122
+        id: 748895195
+        PathAndIcons:
+        - ElementName: None
+          ObjectType: 8
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPath: Default Work Unit

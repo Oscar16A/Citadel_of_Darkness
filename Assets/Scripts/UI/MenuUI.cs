@@ -36,7 +36,7 @@ public class MenuUI : MonoBehaviour
 		//print("update");
 		if(Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter) && title)
 		{
-			StartCoroutine((Transition()));
+			StartCoroutine((Transition()));	
 		}
 	}
     public void Play()
@@ -84,6 +84,10 @@ public class MenuUI : MonoBehaviour
 		volumeInput.text = input.ToString();
 		StatsData.volumeLevel = input;
 
+		//AUDIO
+		//Sets Master Volume level to input value
+		AkSoundEngine.SetRTPCValue("Master_Volume", input);
+
 	}
 	public void Restore()
 	{
@@ -95,6 +99,10 @@ public class MenuUI : MonoBehaviour
 
 		mouseSlider.value = 3.2f;
 		volumeSlider.value = 70;
+
+		//AUDIO
+		//Sets Master Volume level to volumeSlider.value 
+		AkSoundEngine.SetRTPCValue("Master_Volume", volumeSlider.value);
 
 	}
 }

@@ -6,12 +6,14 @@
 				<SoundBank Name="Main" ID="{A85F2FDE-1A4F-4F1B-9C72-0A7ECEB62031}">
 					<ObjectInclusionList>
 						<ObjectRef Name="Play_Cave_01" ID="{6CF679CE-1471-40C8-9796-C699064A0144}" WorkUnitID="{BF7B8F25-273C-4FB6-8832-182924E218F1}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Set_State_Menu" ID="{AB103EED-B05D-4157-854D-906183680A2C}" WorkUnitID="{BF7B8F25-273C-4FB6-8832-182924E218F1}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_Footsteps_Wall_Running" ID="{91720AE7-3E1F-41A8-97F7-0D1944988A23}" WorkUnitID="{BF7B8F25-273C-4FB6-8832-182924E218F1}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Footsteps_Running" ID="{0F12583A-7A31-420B-AB9D-513DC4D16B07}" WorkUnitID="{BF7B8F25-273C-4FB6-8832-182924E218F1}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Turtle_Squeal" ID="{2B343A60-1792-422E-9381-0A6E910E1AD8}" WorkUnitID="{BF7B8F25-273C-4FB6-8832-182924E218F1}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Footsteps_Walking" ID="{44035062-FEC3-42AC-9963-74EF8ABEA7A1}" WorkUnitID="{BF7B8F25-273C-4FB6-8832-182924E218F1}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_Footsteps_Walking" ID="{268B2F78-B527-433B-9AFC-0B3A1DBAD3E5}" WorkUnitID="{BF7B8F25-273C-4FB6-8832-182924E218F1}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Jump_Landing" ID="{89CBF339-9057-4608-BCED-292E6472EED5}" WorkUnitID="{BF7B8F25-273C-4FB6-8832-182924E218F1}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Set_State_Game" ID="{569FE217-F28A-46E6-B9F1-5974E4246E15}" WorkUnitID="{BF7B8F25-273C-4FB6-8832-182924E218F1}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Jump_Landing_Cloth" ID="{882A518D-04B5-4895-A876-6B4F50F74ED6}" WorkUnitID="{BF7B8F25-273C-4FB6-8832-182924E218F1}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_Cave_01" ID="{5E25F4FE-797F-4B13-BDFA-8F162A692B50}" WorkUnitID="{BF7B8F25-273C-4FB6-8832-182924E218F1}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_Footsteps_Running" ID="{1A5C348C-2DD7-4D4F-B986-5E46562A25D7}" WorkUnitID="{BF7B8F25-273C-4FB6-8832-182924E218F1}" Origin="Manual" Filter="7"/>

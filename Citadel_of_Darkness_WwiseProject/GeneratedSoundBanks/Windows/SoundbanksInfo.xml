@@ -15,6 +15,9 @@
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
+			<GameParameters>
+				<GameParameter Id="4179668880" Name="Master_Volume" ObjectPath="\Game Parameters\Default Work Unit\Master_Volume"/>
+			</GameParameters>
 		</SoundBank>
 		<SoundBank Id="3161908922" Language="SFX">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
@@ -113,6 +116,8 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="4207344442" Name="Set_State_Game" ObjectPath="\Events\Default Work Unit\Set_State_Game" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2302270969" Name="Set_State_Menu" ObjectPath="\Events\Default Work Unit\Set_State_Menu" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="3963272187" Name="Stop_Cave_01" ObjectPath="\Events\Default Work Unit\Stop_Cave_01" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="3603051261" Name="Stop_Footsteps_Running" ObjectPath="\Events\Default Work Unit\Stop_Footsteps_Running" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="2120730845" Name="Stop_Footsteps_Walking" ObjectPath="\Events\Default Work Unit\Stop_Footsteps_Walking" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>

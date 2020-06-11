@@ -31,6 +31,7 @@
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="2"/>
 								<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -60,6 +61,7 @@
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="2"/>
 								<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -119,6 +121,7 @@
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="2"/>
 								<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -132,7 +135,7 @@
 					<ChildrenList>
 						<Action Name="" ID="{83FADB53-E5E4-4FFA-8E3C-FFFB274587A2}" ShortID="702264222">
 							<PropertyList>
-								<Property Name="FadeTime" Type="Real64" Value="1"/>
+								<Property Name="FadeTime" Type="Real64" Value="2.5"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -147,11 +150,40 @@
 						<Action Name="" ID="{7A52F9CD-749B-4685-B2A0-D4D0A2A6F21E}" ShortID="1067074550">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="2"/>
-								<Property Name="FadeTime" Type="Real64" Value="1"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Cave_01" ID="{CA2DDED9-09E3-45D5-8593-F43EBAFBCBA2}" WorkUnitID="{471DBAFB-3C9D-4167-8D59-F2033C0E6C08}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Set_State_Game" ID="{569FE217-F28A-46E6-B9F1-5974E4246E15}">
+					<ChildrenList>
+						<Action Name="" ID="{C73FA0A4-74EB-4CF4-9BC8-2EADEAF3E15F}" ShortID="678845568">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Game" ID="{321C9431-37F6-4CF3-9C31-6DAAF0732C92}" WorkUnitID="{7D536F05-139F-48AE-B629-A2AC5FE0652A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Set_State_Menu" ID="{AB103EED-B05D-4157-854D-906183680A2C}">
+					<ChildrenList>
+						<Action Name="" ID="{EF28EF03-3F56-4FD3-AF3D-AD00EC29A7B6}" ShortID="547046544">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Menu" ID="{B33A7DF9-D4D8-45FE-9CE5-8D7718575400}" WorkUnitID="{7D536F05-139F-48AE-B629-A2AC5FE0652A}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

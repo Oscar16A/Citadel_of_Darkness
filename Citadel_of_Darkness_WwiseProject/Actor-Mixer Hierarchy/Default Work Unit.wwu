@@ -162,6 +162,27 @@
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="Game_States" ID="{FB47E751-B14A-471E-845E-C1AFBC35C12C}"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="Menu" ID="{B33A7DF9-D4D8-45FE-9CE5-8D7718575400}"/>
+								<CustomState Name="" ID="{A8F363D0-2466-45BD-AC44-201A9130C783}" ShortID="844669889">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64" Value="-108"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Game" ID="{321C9431-37F6-4CF3-9C31-6DAAF0732C92}"/>
+								<CustomState Name="" ID="{729F497A-362F-4EB8-848C-0C9184399EA5}" ShortID="356297014"/>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
 				</RandomSequenceContainer>
 				<RandomSequenceContainer Name="Footsteps_Walking" ID="{41F370FB-EA37-4724-9485-A1AE32F3BF0B}" ShortID="926700994">
 					<PropertyList>
@@ -323,6 +344,27 @@
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="Game_States" ID="{FB47E751-B14A-471E-845E-C1AFBC35C12C}"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="Menu" ID="{B33A7DF9-D4D8-45FE-9CE5-8D7718575400}"/>
+								<CustomState Name="" ID="{C5CD28E0-D0E6-4F6A-B21F-9187C2C59E89}" ShortID="375928589">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64" Value="-108"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Game" ID="{321C9431-37F6-4CF3-9C31-6DAAF0732C92}"/>
+								<CustomState Name="" ID="{F28AD6C3-7B36-47DD-8918-87A80D7CA518}" ShortID="465888693"/>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
 				</RandomSequenceContainer>
 				<RandomSequenceContainer Name="Jump" ID="{92A2482F-B7FA-4312-878C-0E2567D7F375}" ShortID="416407734">
 					<ReferenceList>
@@ -365,6 +407,23 @@
 							</ReferenceList>
 						</Sound>
 					</ChildrenList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="Game_States" ID="{FB47E751-B14A-471E-845E-C1AFBC35C12C}"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="Menu" ID="{B33A7DF9-D4D8-45FE-9CE5-8D7718575400}"/>
+								<CustomState Name="" ID="{82BEA290-C00C-47DD-A455-7F8AFDEC3077}" ShortID="222620895"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Game" ID="{321C9431-37F6-4CF3-9C31-6DAAF0732C92}"/>
+								<CustomState Name="" ID="{278BA5B9-DD22-4286-9428-A9ABFDC35C3A}" ShortID="916491540"/>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
 				</RandomSequenceContainer>
 				<RandomSequenceContainer Name="Jump_Landing" ID="{7E39CAA5-5CAB-4992-9FDB-206F9ED4D4D8}" ShortID="367850140">
 					<PropertyList>
@@ -645,6 +704,27 @@
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="Game_States" ID="{FB47E751-B14A-471E-845E-C1AFBC35C12C}"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="Menu" ID="{B33A7DF9-D4D8-45FE-9CE5-8D7718575400}"/>
+								<CustomState Name="" ID="{6726C509-9F56-4CBB-8855-EF90FFD36538}" ShortID="893111139">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64" Value="-108"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Game" ID="{321C9431-37F6-4CF3-9C31-6DAAF0732C92}"/>
+								<CustomState Name="" ID="{E6B8C8D2-E297-4E1B-B514-E354BB2C83AB}" ShortID="559308943"/>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
 				</RandomSequenceContainer>
 				<Sound Name="Jump_Landing_Cloth" ID="{7D426F75-37A0-49CE-B6B8-D2ED2C4F1DC7}" ShortID="66249205">
 					<PropertyList>
@@ -719,6 +799,23 @@
 							</MediaIDList>
 						</AudioFileSource>
 					</ChildrenList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="Game_States" ID="{FB47E751-B14A-471E-845E-C1AFBC35C12C}"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="Menu" ID="{B33A7DF9-D4D8-45FE-9CE5-8D7718575400}"/>
+								<CustomState Name="" ID="{F9E6810B-5FC7-48D8-8CD9-D48298566F14}" ShortID="33983098"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Game" ID="{321C9431-37F6-4CF3-9C31-6DAAF0732C92}"/>
+								<CustomState Name="" ID="{2BEDE582-AFED-40D6-860E-C2307A9F5490}" ShortID="407429274"/>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
 					<ActiveSourceList>
 						<ActiveSource Name="Cave Entrance" ID="{E2A97BB1-A227-46D3-AB71-719EBA853253}" Platform="Linked"/>
 					</ActiveSourceList>
