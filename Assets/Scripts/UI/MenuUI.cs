@@ -30,6 +30,7 @@ public class MenuUI : MonoBehaviour
 			Menu_panel.SetActive(true);
 			transitionUI_img.SetActive(false);
 		}
+		Cursor.lockState = CursorLockMode.None;
 	}
 	public void Update()
 	{
